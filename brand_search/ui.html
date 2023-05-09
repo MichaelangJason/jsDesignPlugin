@@ -4,16 +4,45 @@
             <img src="img/searchIcon.png" id="searchIcon" alt="">
             <!-- placeholder for a future image -->
             <input type="text" placeholder="输入品牌名称或网址链接">
-            <button id="clearButton">
-                <img src="img/clear2x.png" id="clearButton"alt="">
-            </button>
         </div>
     </div>
 </body>
 
 <script>
-    const inputBox = document.getElementById("inputBox");
-    inputBox.onfocus = () => {}; // light the border
+    const input = document.querySelector("input")
+    const inputBox = document.querySelector("#inputBox")
+    let clear = document.getElementById("clearButton");
+    input.addEventListener("input", displayClearButton, false);
+    
+    function displayClearButton() {
+        clear = document.getElementById("clearButton");
+        const userInput = input.value;
+        
+        if (userInput === "") {
+            // case to remove the clear button from inputBox if it exists
+            if (clear === null) {
+                return;
+            }
+            inputBox.removeChild(clear);
+            return;
+        }
+
+        // case where input.value is not empty
+        if (clear !== null) {
+            return;
+        }
+        const newClear = document.createElement("input");
+        newClear.id = "clearButton";
+        inputBox.appendChild(newClear);
+        newClear.onclick = resetPlugin;
+        return;
+    }
+
+    function resetPlugin() {
+        input.value = "";
+        displayClearButton();
+    }
+
 </script>
 
 <style>
@@ -54,12 +83,12 @@
     }
     #inputBox:hover {
         border: 1px solid #E0E0E0;
-        padding: 8px 7px 8px 7px;
+        padding: 7px 7px 7px 7px;
     }
     #inputBox:focus-within {
         /*focused when a child element is focused*/
         border:1px solid rgba(69, 150, 255, 1);
-        padding: 8px 7px 8px 7px;
+        padding: 7px 7px 7px 7px;
     }
     #searchIcon {
         left: 8px;
@@ -99,6 +128,19 @@
         color: rgba(32, 32, 32, 0.4);
     }
     #clearButton {
+        left: 204px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.8;
+        display: flex;
+        background-color: transparent;
+        background-image: url(img/clear2x.png);
+        background-size: cover;
+        border: none;
+        cursor: pointer;
+    }
+    #clearIcon {
         left: 204px;
         top: 8px;
         width: 16px;
