@@ -23,11 +23,13 @@
     const create = document.querySelector('.create')
     const exit = document.querySelector('.exit')
     const countBox = document.querySelector('.countbox')
-    const type = (Number.isNaN(num.value))? "string": "number";
+    
+	//console.log(type)
     const passIn = (type, num) => parent.postMessage({ pluginMessage: {type, ...num}}, "*")
-    countBox.onfocus = () => count.focus()
+    countBox.onfocus = () => num.focus()
     exit.onclick = () => passIn('exit')
-    create.onclick = () => passIn(type, {val: num.value})
+	// update the type num.value at click
+    create.onclick = () => passIn((Number.isNaN(parseInt(num.value)))? "string": "number", {val: num.value})
 
     // receives result cfrom
     // if (Number.isNaN(type)) {passIn("string", {val: num.value})}

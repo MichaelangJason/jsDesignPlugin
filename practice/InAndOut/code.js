@@ -16,12 +16,16 @@ jsDesign.ui.onmessage = (msg) => {
     /**
      * the "main" function receives a structured input from parent.postMessage located in ui.html
      */
+    // console.log(msg.type)
+    // console.log(msg.val)
+    // console.log(typeof msg.val == "string")
     if (msg.type === "exit") {
         jsDesign.closePlugin();
     }
     if (msg.type === "string") {
         const text = jsDesign.createText();
-        text.characters = msg.val;
+        text.characters = msg.val.toString();
+        console.log(text.characters);
         createBox(text, blackBox);
     }
     if (msg.type === "number") {
@@ -31,7 +35,7 @@ jsDesign.ui.onmessage = (msg) => {
     }
 };
 function createBox(arg, colorBox) {
-    const newBox = colorBox(arg);
+    colorBox(arg);
 }
 // both whiteBox and blackBox creates a FrameNode as parent node
 function whiteBox(arg) {
