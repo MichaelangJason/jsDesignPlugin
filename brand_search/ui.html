@@ -12,7 +12,22 @@
     const input = document.querySelector("input")
     const inputBox = document.querySelector("#inputBox")
     let clear = document.getElementById("clearButton");
-    input.addEventListener("input", displayClearButton, false);
+
+    input.oninput = () => {
+        displayClearButton();
+        const userInput = input.value;
+        
+        if (userInput === "") {
+            // ends the event
+            return;
+        }
+
+
+
+        
+    }
+
+    const sentRequest = (msg) => parent.postMessage({ pluginMessage: {}}, "*")
     
     function displayClearButton() {
         clear = document.getElementById("clearButton");
@@ -140,16 +155,14 @@
         border: none;
         cursor: pointer;
     }
-    #clearIcon {
-        left: 204px;
-        top: 8px;
-        width: 16px;
-        height: 16px;
-        opacity: 0.8;
-        display: flex;
-        background-color: transparent;
-        border: none;
-    }
+    #zeroStateDefault {
 
+    }
+    #zeroStateNull {
+
+    }
+    #zeroStateUnstable {
+        
+    }
     
 </style>
