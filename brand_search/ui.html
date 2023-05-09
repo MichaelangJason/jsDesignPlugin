@@ -1,0 +1,102 @@
+<body>
+    <div class="box">
+        <div class="inputBox">
+            <img src="img/searchIcon.png" class="searchIcon" alt="">
+            <!-- placeholder for a future image -->
+            <input type="text" placeholder="输入品牌名称或网址链接">
+            <button class="clearButton">
+                <img src="img/clear2x.png" class="clearButton"alt="">
+            </button>
+        </div>
+    </div>
+</body>
+
+<script>
+
+</script>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html,
+    body {
+        width: fit-content;
+        height: fit-content;
+        user-select: none; /* may causing some undefined behavior */
+    }
+    .box {
+        left: 0px;
+        top: 0px;
+        width: 260px;
+        height: 393px;
+        opacity: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 1);
+        padding: 16px 16px 16px 16px;
+    }
+    .inputBox {
+        width: 228px;
+        height: 32px;
+        opacity: 1;
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.03);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 8px 8px 8px 8px;
+    }
+    .searchIcon {
+        left: 8px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.4;
+        display: flex;
+    }
+    input[type="text"] {
+        margin-left: 4px;
+        margin-right: 4px;
+        height: 20px;
+        width: 172px;
+        border: none;
+        padding: 0px;
+        background-color: transparent;
+        opacity: 1;
+        font-size: 12px;
+        font-weight: 400;
+        font-family: PingFang;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(32, 32, 32, 1);
+        text-align: left;
+        vertical-align: top;
+    }
+    input[type="text"]:focus {
+        outline: none;
+    }
+    input[type="text"]::-webkit-input-placeholder {
+        font-size: 12px;
+        font-weight: 400;
+        font-family: PingFang;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(32, 32, 32, 0.4);
+    }
+    .clearButton {
+        left: 204px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.8;
+        display: flex;
+        background-color: transparent;
+        border: none;
+    }
+
+    
+</style>

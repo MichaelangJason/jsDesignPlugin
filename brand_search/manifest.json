@@ -1,8 +1,9 @@
 {
-  "name": "brand_search",
+  "name": "品牌查询",
   "id": "XseObg-csQPjgZ_qIyGZX",
   "api": "1.0.0",
   "main": "code.js",
+  "ui": "ui.html",
   "editorType": [
     "jsDesign"
   ]
