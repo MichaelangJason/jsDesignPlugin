@@ -1,18 +1,19 @@
 <body>
-    <div class="box">
-        <div class="inputBox">
-            <img src="img/searchIcon.png" class="searchIcon" alt="">
+    <div id="box">
+        <div id="inputBox">
+            <img src="img/searchIcon.png" id="searchIcon" alt="">
             <!-- placeholder for a future image -->
             <input type="text" placeholder="输入品牌名称或网址链接">
-            <button class="clearButton">
-                <img src="img/clear2x.png" class="clearButton"alt="">
+            <button id="clearButton">
+                <img src="img/clear2x.png" id="clearButton"alt="">
             </button>
         </div>
     </div>
 </body>
 
 <script>
-
+    const inputBox = document.getElementById("inputBox");
+    inputBox.onfocus = () => {}; // light the border
 </script>
 
 <style>
@@ -27,7 +28,7 @@
         height: fit-content;
         user-select: none; /* may causing some undefined behavior */
     }
-    .box {
+    #box {
         left: 0px;
         top: 0px;
         width: 260px;
@@ -39,7 +40,7 @@
         background: rgba(255, 255, 255, 1);
         padding: 16px 16px 16px 16px;
     }
-    .inputBox {
+    #inputBox {
         width: 228px;
         height: 32px;
         opacity: 1;
@@ -49,8 +50,18 @@
         justify-content: flex-start;
         align-items: center;
         padding: 8px 8px 8px 8px;
+        box-sizing: border-box;
     }
-    .searchIcon {
+    #inputBox:hover {
+        border: 1px solid #E0E0E0;
+        padding: 8px 7px 8px 7px;
+    }
+    #inputBox:focus-within {
+        /*focused when a child element is focused*/
+        border:1px solid rgba(69, 150, 255, 1);
+        padding: 8px 7px 8px 7px;
+    }
+    #searchIcon {
         left: 8px;
         top: 8px;
         width: 16px;
@@ -87,7 +98,7 @@
         line-height: 20px;
         color: rgba(32, 32, 32, 0.4);
     }
-    .clearButton {
+    #clearButton {
         left: 204px;
         top: 8px;
         width: 16px;
