@@ -50,14 +50,16 @@ function whiteBox(arg: TextNode) {
     // create a rectangle box
     const box = jsDesign.createRectangle();
     // set position
-    box.x = 50;
-    box.y = 50;
+    box.x = 0;
+    box.y = 0;
     // set TextNode position, same as box
     arg.x = 50;
     arg.y = 50;
 
     // set weight and height
-    box.fills = [{ type: 'SOLID', color: { r: 0.3, g: 0.3, b: 0.3 } }];
+    box.fills = [{ type: 'SOLID', color: {b: 0.5019607843137255,
+        g: 0.29411764705882354,
+        r: 0.11372549019607843}, opacity: 0.53 }];
 
     boxParent.appendChild(box);
     boxParent.appendChild(arg);
@@ -72,10 +74,10 @@ function blackBox(arg: TextNode) {
     // create a Ellipse/round box
     const box = jsDesign.createEllipse();
     // set position
-    box.x = 50;
-    box.y = 50;
+    box.x = 0;
+    box.y = 0;
     // set weight and height
-    box.fills = [{ type: 'SOLID', color: { r: 0.3, g: 0.3, b: 0.3 } }];
+    box.fills = [{ type: 'SOLID', color: {r: 0.08627450980392157, g: 0.4, b: 0.3803921568627451}, opacity: 0.53 }];
     // set starting, ending angle, and inner radius
     box.arcData = { startingAngle: 0, endingAngle: 2 * Math.PI, innerRadius: 0 };
 
