@@ -1,0 +1,185 @@
+<body>
+    <div class="box">
+		<div class="inner">
+            <span class="geshu">个数</span>
+            <div class="countBox" tabindex="999">
+                <input type="text" value="10" min="0" />
+                <span class="ge">个</span>
+            </div>
+		</div>
+	</div>
+	<footer>
+		<div class="buttonLeft">
+			<span class="exit">取消</span>
+		</div>
+		<div class="buttonRight">
+            <span class="create">创建</span>
+        </div>
+	</footer>
+</body>
+
+<script>
+    const num = document.querySelector('input[type="text"]')
+    const create = document.querySelector('.create')
+    const exit = document.querySelector('.exit')
+    const countBox = document.querySelector('.countbox')
+    const type = (Number.isNaN(num.value))? "string": "number";
+    const passIn = (type, num) => parent.postMessage({ pluginMessage: {type, ...num}}, "*")
+    countBox.onfocus = () => count.focus()
+    exit.onclick = () => passIn('exit')
+    create.onclick = () => passIn(type, {val: num.value})
+
+    // receives result cfrom
+    // if (Number.isNaN(type)) {passIn("string", {val: num.value})}
+    // else {passIn("number", {val: type})}
+
+
+</script>
+
+<style>
+    /* style copied from 创建星形 style */
+    /* for API and JS testing purpose only */
+    * {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	html,
+	body {
+		width: fit-content;
+		height: fit-content;
+		user-select: none;
+	}
+    .box {
+		left: 0px;
+		top: 10px;
+		width: 260px;
+		height: 28px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0px 16px 0px 16px;
+	}
+    .inner {
+		left: 16px;
+		top: 0px;
+		width: 228px;
+		height: 28px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.countBox {
+		left: 32px;
+		top: 0px;
+		width: 45px;
+		height: 28px;
+		background: rgba(0, 0, 0, 0.03);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 4px 0px 8px;
+		border-radius: 4px;
+		margin-left: 8px;
+		cursor: text;
+	}
+	.geshu {
+		left: 0px;
+		top: 4px;
+		width: 24px;
+		height: 20px;
+		display: flex;
+		color: rgba(32, 32, 32, 0.6);
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+	input[type='text'] {
+		left: 8px;
+		top: 4px;
+		width: 13px;
+		height: 20px;
+		display: flex;
+		color: rgba(32, 32, 32, 1);
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 400;
+		border: none;
+		background-color: transparent;
+		outline: none;
+	}
+	.ge {
+		left: 29px;
+		top: 4px;
+		width: 12px;
+		height: 20px;
+		display: flex;
+		color: rgba(32, 32, 32, 1);
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 400;
+		margin-left: 8px;
+	}
+	footer {
+		left: 0px;
+		top: 301px;
+		width: 260px;
+		height: 64px;
+		mix-blend-mode: normal;
+		display: flex;
+		align-items: center;
+		padding: 16px 16px 16px 16px;
+	}
+	.buttonLeft {
+		left: 16px;
+		top: 16px;
+		width: 75px;
+		height: 32px;
+		border: 1px solid rgba(32, 32, 32, 0.2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 20px 0px 20px;
+		border-radius: 6px;
+		box-shadow: 0 0 0 1 rgba(32, 32, 32, 0.2);
+		cursor: pointer;
+	}
+	.buttonRight {
+		left: 136px;
+		top: 16px;
+		width: 75px;
+		height: 32px;
+		background: rgba(69, 150, 255, 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 20px 0px 20px;
+		border-radius: 6px;
+		cursor: pointer;
+		margin-left: 16px;
+	}
+	.exit {
+		left: 41px;
+		top: 6px;
+		width: 26px;
+		height: 20px;
+		mix-blend-mode: normal;
+		display: flex;
+		color: rgba(32, 32, 32, 1);
+		font-size: 13px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+	.create {
+		left: 41px;
+		top: 6px;
+		width: 26px;
+		height: 20px;
+		mix-blend-mode: normal;
+		display: flex;
+		color: rgba(255, 255, 255, 1);
+		font-size: 13px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+</style>

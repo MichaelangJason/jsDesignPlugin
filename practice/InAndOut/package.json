@@ -1,0 +1,12 @@
+{
+	"name": "practice",
+	"version": "1.0.0",
+	"main": "code.js",
+	"scripts": {
+		"build": "tsc -p tsconfig.json"
+	},
+	"devDependencies": {
+		"@jsdesigndeveloper/plugin-typings": "^1.0.3",
+		"typescript": "*"
+	}
+}
