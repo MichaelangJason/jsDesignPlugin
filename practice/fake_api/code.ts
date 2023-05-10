@@ -5,7 +5,7 @@ jsDesign.showUI(__html__, {
 })
 
 // API authentication parameters
-const authentication = {
+const AUTHENTICATION = {
     method: 'GET',
     headers: {
         accept: 'application/json',
@@ -15,27 +15,56 @@ const authentication = {
     }
 }
 
+// API prefix
+const BRANDFETCH_API_PREFIX = 'https://api.brandfetch.io/v2/'
+
 /**
  * this function only process API request based on user input
  * any webpage changes are made in GUI file
  */
 jsDesign.ui.onmessage = (msg) => {
     // user input assume to have none empty string value
-
-    // combine user input with API access URL
-    const searchInput = 'https://api.brandfetch.io/v2/search/' + msg.val;
-    let brandsInfo;
-
-    // invoke API to gain the result
-    // fetch(searchInput, authentication)
-    //     .then(res => {
-    //         brandsInfo = res.json()
-    //         return brandsInfo;
-    //     })
-    //     .then(res => console.log(res))
-    //     .catch(err => console.log(err))
-    fetch('https://reqres.in/api/users')
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+    fakeRetrieve(msg.val)
     
+}
+
+const post = (type: string, msg: any = {}) => jsDesign.ui.postMessage({pluginMessage: {type, ...msg}});
+
+async function fakeRetrieve(arg: string) {
+    const api = 'https://reqres.in/api/' + arg
+    console.log(api)
+    try {
+    const result = await fetch(api);
+    if(!result.ok) {
+        console.log("not ok")
+    }
+    const data = await result.json();
+    post('succuss', {val: data})
+    } catch(err) {
+        console.log(err);
+        post("error", {error: err})
+    }
+    // console.log(data.data[0])
+}
+
+async function fetchWithDomainName(domainName: string) {
+    const api = BRANDFETCH_API_PREFIX + 'brands' + domainName;
+    
+    try {
+        const result = await fetch(api);
+        const data = await result.json();
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+async function searchBrandDomain(brandName: string) {
+    const api = BRANDFETCH_API_PREFIX + 'search' + brandName;
+
+    try {
+        const result = await fetch(api);
+        const data = await result.json();
+    } catch(error) {
+        console.log(error);
+    }
 }

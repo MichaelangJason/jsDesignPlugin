@@ -9,6 +9,23 @@
 </body>
 
 <script>
+    
+    // zero state contents
+    const zeroStates = [
+        {
+            state: "default",
+            content: `<div id="zeroStateDefaultBox"><img src="img/default2x.png" id="defaultImg" alt=""><p id="defaultText">输入品牌名称或网址链接</p></div>`
+        },
+        {
+            state: "null",
+            content: `<div id="zeroStateNullBox"><img src="img/null2x.png id="nullImg" alt=""><p id="nullText1">暂无结果</p><p id="nullText2">输入网址链接试试</p></div>`
+        },
+        {
+            state: "unstable",
+            content: `<div id="zeroStateUnstableBox"><img src="img/unstable2x.png" id="unstableImg" alt=""><p id="unstableText">网络连接不稳定，请重试</p><p id="unstableButton">刷新</p></div>`
+        }
+    ]
+
     const REQUEST_FREQUENCY = 500;
     const input = document.querySelector("input")
     const inputBox = document.querySelector("#inputBox")
@@ -26,10 +43,17 @@
         sendRequest("brand", {val: userInput})
     }
 
+    onmessage = (msg) => {
+        console.log(msg.type)
+        console.log(msg.val)
+    }
+
     // send information to main ts
     const post = (type, msg) => parent.postMessage({pluginMessage: {type, ...msg}}, "*");
+    
     // debounced sendRequest
     const sendRequest = debounce(post, REQUEST_FREQUENCY)
+
     // show/delete clear button 
     function displayClearButton() {
         clear = document.getElementById("clearButton");
@@ -65,9 +89,9 @@
         let timeoutId;
         // console.log("debouncing")
         // use closure that saves the timeoutId
-        return function() {
+        return function(...args) {
             clearTimeout(timeoutId)
-            timeoutId = setTimeout(callback, delay)
+            timeoutId = setTimeout(() => callback(...args), delay)
         }
     }
 
@@ -86,6 +110,7 @@
         user-select: none; /* may causing some undefined behavior */
     }
     #box {
+        position: relative;
         left: 0px;
         top: 0px;
         width: 260px;
@@ -94,10 +119,12 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        flex-direction: column;
         background: rgba(255, 255, 255, 1);
         padding: 16px 16px 16px 16px;
     }
     #inputBox {
+        position: absolute;
         width: 228px;
         height: 32px;
         opacity: 1;
@@ -106,6 +133,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        flex-direction: column;
         padding: 8px 8px 8px 8px;
         box-sizing: border-box;
     }
@@ -119,6 +147,7 @@
         padding: 7px 7px 7px 7px;
     }
     #searchIcon {
+        position: absolute;
         left: 8px;
         top: 8px;
         width: 16px;
@@ -127,6 +156,7 @@
         display: flex;
     }
     input[type="text"] {
+        position: absolute;
         margin-left: 4px;
         margin-right: 4px;
         height: 20px;
@@ -156,6 +186,7 @@
         color: rgba(32, 32, 32, 0.4);
     }
     #clearButton {
+        position: absolute;
         left: 204px;
         top: 8px;
         width: 16px;
@@ -168,14 +199,158 @@
         border: none;
         cursor: pointer;
     }
-    #zeroStateDefault {
+    #zeroStateDefaultBox {
+        position: absolute;
+        left: 64px;
+        top: 141.5px;
+        width: 132px;
+        height: 114px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #defaultImg {
+        left: 6px;
+        top: 0px;
+        width: 120px;
+        height: 90px;
+        opacity: 1;
+        display: flex;
+    }
+    #defaultText {
+        left: 0px;
+        top: 94px;
+        width: 132px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(32, 32, 32, 0.4);
+        text-align: center;
+        vertical-align: top;
+    }
+    #zeroStateNullBox {
+        position: absolute;
+        left: 70px;
+        top: 129.5px;
+        width: 120px;
+        height: 138px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
     }
-    #zeroStateNull {
+    #nullImg {
+        left: 0px;
+        top: 0px;
+        width: 120px;
+        height: 90px;
+        opacity: 1;
+        display: flex;
+    }
+    #nullText1 {
+        left: 24px;
+        top: 0px;
+        width: 48px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        /** 文本1 */
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(32, 32, 32, 0.8);
+        text-align: center;
+        vertical-align: top;
+    }
+    #nullText2 {
+        left: 0px;
+        top: 24px;
+        width: 96px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        /** 文本1 */
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(32, 32, 32, 0.4);
+        text-align: center;
+        vertical-align: top;
+    }
+    #zeroStateUnstableBox {
+        position: absolute;
+        left: 30px;
+        top: 149.5px;
+        width: 200px;
+        height: 138px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #unstableImg {
+        left: 40px;
+        top: 0px;
+        width: 120px;
+        height: 90px;
+        opacity: 1;
+        display: flex;
+    }
+    #unstableText {
+        left: 34px;
+        top: 0px;
+        width: 132px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(32, 32, 32, 0.8);
+        text-align: center;
+    }
+    #unstableButton {
+        left: 88px;
+        top: 24px;
+        width: 24px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(69, 150, 255, 1);
+        text-align: center;
+        vertical-align: top;
+        cursor: pointer;
+    }
+    #resultContainer {
 
     }
-    #zeroStateUnstable {
-        
+    #resultBox {
+
     }
-    
+    #resultBox:hover {
+
+    }
+    #selectedResult {
+
+    }
 </style>
