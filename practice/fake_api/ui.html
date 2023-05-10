@@ -5,26 +5,29 @@
             <!-- placeholder for a future image -->
             <input type="text" placeholder="输入品牌名称或网址链接">
         </div>
+        <div id="zeroStateDefaultBox" class="zeroStateBox">
+            <img src="img/default2x.png" id="defaultImg" alt="">
+            <p id="defaultText">输入品牌名称或网址链接</p>
+        </div>
     </div>
 </body>
 
 <script>
-    
-    // zero state contents
-    const zeroStates = [
-        {
-            state: "default",
-            content: `<div id="zeroStateDefaultBox"><img src="img/default2x.png" id="defaultImg" alt=""><p id="defaultText">输入品牌名称或网址链接</p></div>`
+
+    const zeroStates = {
+        default: {
+            boxId: 'zeroStateDefaultBox',
+            content: '<img src="img/default2x.png" id="defaultImg" alt=""><p id="defaultText">输入品牌名称或网址链接</p>'
         },
-        {
-            state: "null",
-            content: `<div id="zeroStateNullBox"><img src="img/null2x.png id="nullImg" alt=""><p id="nullText1">暂无结果</p><p id="nullText2">输入网址链接试试</p></div>`
+        null: {
+            boxId: 'zeroStateNullBox',
+            content: '<img src="img/null2x.png id="nullImg" alt=""><p id="nullText1">暂无结果</p><p id="nullText2">输入网址链接试试</p>'
         },
-        {
-            state: "unstable",
-            content: `<div id="zeroStateUnstableBox"><img src="img/unstable2x.png" id="unstableImg" alt=""><p id="unstableText">网络连接不稳定，请重试</p><p id="unstableButton">刷新</p></div>`
+        unstable: {
+            boxId: 'zeroStateUnstableBox',
+            content: '<img src="img/unstable2x.png" id="unstableImg" alt=""><p id="unstableText">网络连接不稳定，请重试</p><p id="unstableButton">刷新</p>'
         }
-    ]
+    }
 
     const REQUEST_FREQUENCY = 500;
     const input = document.querySelector("input")
@@ -38,14 +41,23 @@
         
         if (userInput === "") {
             // ends the event
+            resetPlugin();
             return;
         }
         sendRequest("brand", {val: userInput})
     }
 
-    onmessage = (msg) => {
-        console.log(msg.type)
-        console.log(msg.val)
+    onmessage = (event) => {
+        const msg = event.data.pluginMessage.pluginMessage
+        
+        if (msg.type === 'success') {
+            removeZeroState();
+            addZeroState('unstable');
+        }
+        if (msg.type === 'failed') {
+            removeZeroState();
+            addZeroState('null')
+        } 
     }
 
     // send information to main ts
@@ -82,12 +94,13 @@
     function resetPlugin() {
         input.value = "";
         displayClearButton();
+        removeZeroState();
+        addZeroState('default');
     }
 
     // 防抖 debouncing function
     function debounce(callback, delay) {
         let timeoutId;
-        // console.log("debouncing")
         // use closure that saves the timeoutId
         return function(...args) {
             clearTimeout(timeoutId)
@@ -95,6 +108,33 @@
         }
     }
 
+    // remove zero state element (all of them if there exists more than one)
+    function removeZeroState() {
+        const pluginContainer = document.getElementById('box')
+        const zeroStateBox = document.querySelectorAll(".zeroStateBox")
+
+        zeroStateBox.forEach((element) => pluginContainer.removeChild(element))
+    }
+
+    // add zero state element with given `state`
+    function addZeroState(state) {
+
+        // create new zero state element
+        const pluginContainer = document.getElementById('box')
+        const zeroStateBox = document.createElement('div');
+        zeroStateBox.className = 'zeroStateBox';
+        zeroStateBox.id = zeroStates[state].boxId;
+        zeroStateBox.innerHTML = zeroStates[state].content;
+        pluginContainer.appendChild(zeroStateBox);
+
+        if (state === 'unstable') {
+            const resetButton = document.querySelector('#unstableButton')
+            resetButton.onclick = () => {
+                console.log("trying reset");
+
+            }
+        }
+    }
 </script>
 
 <style>
@@ -247,6 +287,7 @@
         align-items: center;
 
     }
+    .zeroStateBox
     #nullImg {
         left: 0px;
         top: 0px;

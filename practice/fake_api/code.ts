@@ -32,14 +32,16 @@ const post = (type: string, msg: any = {}) => jsDesign.ui.postMessage({pluginMes
 
 async function fakeRetrieve(arg: string) {
     const api = 'https://reqres.in/api/' + arg
-    console.log(api)
     try {
     const result = await fetch(api);
     if(!result.ok) {
         console.log("not ok")
-    }
+        post('failed', {})
+    } else {
     const data = await result.json();
-    post('succuss', {val: data})
+    console.log(data)
+    post('success', {val: data})
+    }
     } catch(err) {
         console.log(err);
         post("error", {error: err})

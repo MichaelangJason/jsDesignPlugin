@@ -36,14 +36,17 @@ const post = (type, msg = {}) => jsDesign.ui.postMessage({ pluginMessage: Object
 function fakeRetrieve(arg) {
     return __awaiter(this, void 0, void 0, function* () {
         const api = 'https://reqres.in/api/' + arg;
-        console.log(api);
         try {
             const result = yield fetch(api);
             if (!result.ok) {
                 console.log("not ok");
+                post('failed', {});
             }
-            const data = yield result.json();
-            post('succuss', { val: data });
+            else {
+                const data = yield result.json();
+                console.log(data);
+                post('success', { val: data });
+            }
         }
         catch (err) {
             console.log(err);
