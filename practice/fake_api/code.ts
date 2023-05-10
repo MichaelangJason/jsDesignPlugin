@@ -54,7 +54,11 @@ async function fetchWithDomainName(domainName: string) {
     
     try {
         const result = await fetch(api);
+        if (!result.ok) {
+            
+        } else {
         const data = await result.json();
+        }
     } catch(error) {
         console.log(error);
     }

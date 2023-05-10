@@ -60,7 +60,11 @@ function fetchWithDomainName(domainName) {
         const api = BRANDFETCH_API_PREFIX + 'brands' + domainName;
         try {
             const result = yield fetch(api);
-            const data = yield result.json();
+            if (!result.ok) {
+            }
+            else {
+                const data = yield result.json();
+            }
         }
         catch (error) {
             console.log(error);

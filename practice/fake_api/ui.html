@@ -21,7 +21,7 @@
         },
         null: {
             boxId: 'zeroStateNullBox',
-            content: '<img src="img/null2x.png id="nullImg" alt=""><p id="nullText1">暂无结果</p><p id="nullText2">输入网址链接试试</p>'
+            content: '<img src="img/null2x.png" id="nullImg" alt=""><p id="nullText1">暂无结果</p><p id="nullText2">输入网址链接试试</p>'
         },
         unstable: {
             boxId: 'zeroStateUnstableBox',
@@ -239,6 +239,9 @@
         border: none;
         cursor: pointer;
     }
+    #clearButton:focus {
+        outline: none;
+    }
     #zeroStateDefaultBox {
         position: absolute;
         left: 64px;
@@ -256,6 +259,7 @@
         top: 0px;
         width: 120px;
         height: 90px;
+        margin-bottom: 4px;
         opacity: 1;
         display: flex;
     }
@@ -277,7 +281,7 @@
     #zeroStateNullBox {
         position: absolute;
         left: 70px;
-        top: 129.5px;
+        top: 131.5px;
         width: 120px;
         height: 138px;
         opacity: 1;
@@ -293,6 +297,7 @@
         top: 0px;
         width: 120px;
         height: 90px;
+        margin-bottom: 4px;
         opacity: 1;
         display: flex;
     }
@@ -333,7 +338,7 @@
     #zeroStateUnstableBox {
         position: absolute;
         left: 30px;
-        top: 149.5px;
+        top: 133.5px;
         width: 200px;
         height: 138px;
         opacity: 1;
@@ -347,6 +352,7 @@
         top: 0px;
         width: 120px;
         height: 90px;
+        margin-bottom: 4px;
         opacity: 1;
         display: flex;
     }
