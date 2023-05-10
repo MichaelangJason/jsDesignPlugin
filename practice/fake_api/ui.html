@@ -9,10 +9,12 @@
 </body>
 
 <script>
+    const REQUEST_FREQUENCY = 500;
     const input = document.querySelector("input")
     const inputBox = document.querySelector("#inputBox")
     let clear = document.getElementById("clearButton");
 
+    // click event
     input.oninput = () => {
         displayClearButton();
         const userInput = input.value;
@@ -21,11 +23,14 @@
             // ends the event
             return;
         }
-        sendRequest({val: userInput});
+        sendRequest("brand", {val: userInput})
     }
 
-    const sendRequest = (msg) => parent.postMessage({ pluginMessage: {...msg}}, "*")
-    
+    // send information to main ts
+    const post = (type, msg) => parent.postMessage({pluginMessage: {type, ...msg}}, "*");
+    // debounced sendRequest
+    const sendRequest = debounce(post, REQUEST_FREQUENCY)
+    // show/delete clear button 
     function displayClearButton() {
         clear = document.getElementById("clearButton");
         const userInput = input.value;
@@ -53,6 +58,17 @@
     function resetPlugin() {
         input.value = "";
         displayClearButton();
+    }
+
+    // 防抖 debouncing function
+    function debounce(callback, delay) {
+        let timeoutId;
+        // console.log("debouncing")
+        // use closure that saves the timeoutId
+        return function() {
+            clearTimeout(timeoutId)
+            timeoutId = setTimeout(callback, delay)
+        }
     }
 
 </script>
