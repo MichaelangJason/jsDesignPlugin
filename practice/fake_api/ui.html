@@ -51,6 +51,7 @@
         }
         
         // still runs to here if input one char and delete it instantly
+        //post('search', {val: userInput})
         sendRequest("search", {val: userInput})
     }
 
@@ -275,8 +276,25 @@
         resetResultContainer();
         /**
         * brand data properties:
+        * name: string/null
+        * domain: string
+        * claimed: true/false
+        * description: string/null
+        * links: string (brand links)
+        * logos: array (brand logos)
+        * colors: array (brand colors)
+        * fonts: array (brand fonts)
+        * fonts: array (brand images)
         */
     }
+
+    function createLogoBox(logo) {}
+
+    function createColorBox(color) {}
+
+    function createFontBox(font) {}
+
+    function createRelatedImgBox(img) {}
 </script>
 
 <style>
