@@ -29,9 +29,10 @@
         }
     }
 
-    const REQUEST_FREQUENCY = 500;
+
+    const REQUEST_FREQUENCY = 2000;
     const input = document.querySelector("input")
-    const inputBox = document.querySelector("#inputBox")
+    const inputBox = document.getElementById("inputBox");
     let clear = document.getElementById("clearButton");
 
     // click event
@@ -44,20 +45,13 @@
             resetPlugin();
             return;
         }
-        sendRequest("brand", {val: userInput})
+        sendRequest("search", {val: userInput})
     }
 
     onmessage = (event) => {
         const msg = event.data.pluginMessage.pluginMessage
-        
-        if (msg.type === 'success') {
-            removeZeroState();
-            addZeroState('unstable');
-        }
-        if (msg.type === 'failed') {
-            removeZeroState();
-            addZeroState('null')
-        } 
+        console.log(msg);
+        processMsg(msg.type);
     }
 
     // send information to main ts
@@ -118,7 +112,6 @@
 
     // add zero state element with given `state`
     function addZeroState(state) {
-
         // create new zero state element
         const pluginContainer = document.getElementById('box')
         const zeroStateBox = document.createElement('div');
@@ -131,10 +124,38 @@
             const resetButton = document.querySelector('#unstableButton')
             resetButton.onclick = () => {
                 console.log("trying reset");
-
+                const userInput = input.value;
+                sendRequest('search', userInput);
             }
         }
     }
+    // function that process the msg of fetch
+    function processMsg(msg, val = null) {
+        switch(msg) {
+            case 'null':
+                if (!(document.getElementById('zeroStateNullBox') === null)) return 0;
+                removeZeroState();
+                addZeroState('null');
+                break;
+
+            case 'failed': 
+                if (!(document.getElementById('zeroStateUnstableBox') === null)) return 0;
+                removeZeroState();
+                addZeroState('unstable')
+                break;
+            
+            case 'search':
+                // case display the searching result only
+                return 1;
+            
+            case 'brand':
+                // case display details of the selected brand
+                return 1;
+        }
+
+        return 0;
+    }
+    
 </script>
 
 <style>
@@ -174,17 +195,17 @@
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        padding: 8px 8px 8px 8px;
+        padding: 6px 8px 8px 8px;
         box-sizing: border-box;
     }
     #inputBox:hover {
         border: 1px solid #E0E0E0;
-        padding: 7px 7px 7px 7px;
+        padding: 5px 7px 7px 7px;
     }
     #inputBox:focus-within {
         /*focused when a child element is focused*/
         border:1px solid rgba(69, 150, 255, 1);
-        padding: 7px 7px 7px 7px;
+        padding: 5px 7px 7px 7px;
     }
     #searchIcon {
         position: absolute;
@@ -207,7 +228,7 @@
         opacity: 1;
         font-size: 12px;
         font-weight: 400;
-        font-family: PingFang;
+        font-family: PingFangSC-Regular, sans-serif;
         letter-spacing: 0px;
         line-height: 20px;
         color: rgba(32, 32, 32, 1);
@@ -220,7 +241,7 @@
     input[type="text"]::-webkit-input-placeholder {
         font-size: 12px;
         font-weight: 400;
-        font-family: PingFang;
+        font-family: PingFangSC-Regular, sans-serif;
         letter-spacing: 0px;
         line-height: 20px;
         color: rgba(32, 32, 32, 0.4);
