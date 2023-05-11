@@ -41,7 +41,12 @@ const BRANDFETCH_API_PREFIX = 'https://api.brandfetch.io/v2/';
 jsDesign.ui.onmessage = (msg) => {
     // user input assume to have none empty string value
     // searchBrand(msg.val)
-    searchBrand(msg.val);
+    if (msg.type === 'search') {
+        searchBrand(msg.val);
+    }
+    if (msg.type === 'getDetails') {
+        fetchWithDomain(msg.val);
+    }
 };
 const post = (type, msg = {}) => jsDesign.ui.postMessage({ pluginMessage: Object.assign({ type }, msg) });
 function fetchWithDomain(domainName) {
@@ -56,7 +61,7 @@ function fetchWithDomain(domainName) {
             }
             const data = yield result.json();
             console.log(data);
-            post('success', { val: data });
+            post('details', { val: data });
         }
         catch (error) {
             console.log(error);
@@ -83,9 +88,7 @@ function searchBrand(brandName) {
                 postRequestError(Brandfetch_ERROR.NOT_FOUND);
                 return;
             }
-            post('search result', { val: data });
-            // if the result has more than one element, it must have a domain name
-            // fetchWithDomain(data[0].domain);
+            post('brands', { val: data });
         }
         catch (error) {
             console.log(error);
