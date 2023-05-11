@@ -39,16 +39,16 @@ jsDesign.ui.onmessage = (msg) => {
     }
 
     if (msg.type === 'getDetails') {
-        fetchWithDomain(msg.val);
+        getDomainDetails(msg.val);
     }
     
 }
 
 const post = (type: string, msg: any = {}) => jsDesign.ui.postMessage({pluginMessage: {type, ...msg}});
 
-async function fetchWithDomain(domainName: string) {
+async function getDomainDetails(domainName: string) {
     const api = BRANDFETCH_API_PREFIX + 'brands/' + domainName;
-
+    console.log(domainName)
     try {
         const result = await fetch(api, authentication);
         console.log(result);

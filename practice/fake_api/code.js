@@ -45,13 +45,14 @@ jsDesign.ui.onmessage = (msg) => {
         searchBrand(msg.val);
     }
     if (msg.type === 'getDetails') {
-        fetchWithDomain(msg.val);
+        getDomainDetails(msg.val);
     }
 };
 const post = (type, msg = {}) => jsDesign.ui.postMessage({ pluginMessage: Object.assign({ type }, msg) });
-function fetchWithDomain(domainName) {
+function getDomainDetails(domainName) {
     return __awaiter(this, void 0, void 0, function* () {
         const api = BRANDFETCH_API_PREFIX + 'brands/' + domainName;
+        console.log(domainName);
         try {
             const result = yield fetch(api, authentication);
             console.log(result);
