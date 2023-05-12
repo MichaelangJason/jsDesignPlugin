@@ -1,0 +1,12 @@
+{
+	"name": "插件示列-无交互界面",
+	"version": "1.0.0",
+	"main": "code.js",
+	"scripts": {
+		"build": "tsc -p tsconfig.json"
+	},
+	"devDependencies": {
+		"@jsdesigndeveloper/plugin-typings": "^1.0.3",
+		"typescript": "*"
+	}
+}

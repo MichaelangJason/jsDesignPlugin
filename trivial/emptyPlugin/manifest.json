@@ -1,0 +1,9 @@
+{
+  "name": "emptyPlugin",
+  "id": "2BYptm5Xrrhr_5h08FSB6",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "jsDesign"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    // "noEmitHelpers": true,
+    // "importHelpers": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "lib": ["dom", "es2017"],
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@jsdesigndeveloper"
+    ]
+  }
+}
