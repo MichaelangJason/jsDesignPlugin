@@ -60,7 +60,9 @@ function dropIcon(payload) {
     const xFromCanvas = hasUI
         ? dropPosition.clientX - leftPaneWidth
         : dropPosition.clientX;
-    const yFromCanvas = hasUI ? dropPosition.clientY - 40 : dropPosition.clientY;
+    const yFromCanvas = hasUI 
+        ? dropPosition.clientY - 40 
+        : dropPosition.clientY;
 
     const tempNode = jsDesign.createNodeFromSvg(svg);
 

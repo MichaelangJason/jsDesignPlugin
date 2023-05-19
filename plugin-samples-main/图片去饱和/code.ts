@@ -43,7 +43,7 @@ function desaturateNodeTree(node) {
 	}
 	node.fills = fills
 
-	// 递归的对图层子节点进行去饱和
+	// 递归地对图层子节点进行去饱和
 	if ('children' in node) {
 		for (const child of node.children) {
 			desaturateNodeTree(child)
