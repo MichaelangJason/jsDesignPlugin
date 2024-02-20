@@ -1,34 +1,183 @@
+<!-- <link rel="stylesheet" href="style.css"> -->
+
 <body>
     <div id="box">
-        <div id="inputBox">
-            <img src="img/searchIcon.png" id="searchIcon" alt="">
+        <div id="inputBox" class="flex-parent">
+            <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" fill="none"><g opacity="0.4"  transform="translate(0 0)  rotate(0)"><g opacity="1"  transform="translate(0 0)  rotate(0)"><path id="并集" fill-rule="evenodd" style="fill:#202020" opacity="1" d="M2.00001,6.99199v-0.00412c0.00655,-2.75443 2.24403,-4.98787 4.99999,-4.98787c2.76,0 5,2.24 5,5c0,1.20186 -0.4248,2.30512 -1.1322,3.1678l2.9822,2.9822c0.03,0.02 0.05,0.04 0.07,0.07c0.01,0.03 0.03,0.06 0.04,0.09l0.03,0.09c0.01,0.03 0.01,0.07 0.01,0.1c0,0.03 0,0.07 -0.01,0.1l-0.03,0.09c-0.01,0.03 -0.03,0.06 -0.04,0.09c-0.02,0.03 -0.04,0.05 -0.07,0.07c-0.02,0.03 -0.04,0.05 -0.07,0.07c-0.03,0.01 -0.06,0.03 -0.09,0.04l-0.09,0.03c-0.03,0.01 -0.07,0.01 -0.1,0.01c-0.03,0 -0.07,0 -0.1,-0.01l-0.09,-0.03c-0.03,-0.01 -0.06,-0.03 -0.09,-0.04c-0.03,-0.02 -0.05,-0.04 -0.07,-0.07l-2.9822,-2.9822c-0.86268,0.7074 -1.96594,1.1322 -3.1678,1.1322c-2.75596,0 -4.99344,-2.23344 -4.99999,-4.98787v-0.00412l-0.00001,-0.00724v-0.00077l0.00001,-0.00725zM5.72492,3.20732c-0.00134,0.00045 -0.00268,0.00091 -0.00401,0.00136c-1.18068,0.39788 -2.11436,1.33158 -2.51224,2.51226c-0.13778,0.40654 -0.20733,0.82866 -0.20865,1.26635l-0.00001,0.00624l-0.00001,0.00647l0.00001,0.00647c0.00067,0.4385 0.06978,0.86137 0.20731,1.26862c0.00046,0.00135 0.00092,0.00271 0.00138,0.00407c0.39791,1.18067 1.33162,2.11434 2.51232,2.51224c0.41045,0.13907 0.83677,0.2086 1.27898,0.2086c0.44081,0 0.86584,-0.0691 1.27509,-0.2073c0.00147,-0.00053 0.00295,-0.00103 0.00443,-0.0015c1.17932,-0.3976 2.11218,-1.32978 2.51068,-2.50868l0.0011,-0.00346c0.13913,-0.41047 0.2087,-0.83683 0.2087,-1.27906c0,-0.44081 -0.0691,-0.86583 -0.2073,-1.27508l-0.0015,-0.00436v-0.00015c-0.398,-1.18042 -1.33159,-2.11389 -2.51208,-2.51172c-0.41049,-0.13913 -0.83687,-0.20869 -1.27912,-0.20869c-0.44081,0 -0.86583,0.06911 -1.27508,0.20732z"></path></g></g></svg>
+
             <!-- placeholder for a future image -->
-            <input type="text" placeholder="输入品牌名称或网址链接">
+            <input type="text" placeholder="输入品牌名称或网址链接" class="text-style">
+        </div>
+        <div id="zeroStateDefaultBox" class="zeroStateBox flex-parent">
+            <svg id="defaultImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="90" viewBox="0 0 120 90" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><g opacity="1"  transform="translate(24 9)  rotate(0)"><path id="圆形 4" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M36 0C16.12 0 0 16.12 0 36C0 55.88 16.12 72 36 72C55.88 72 72 55.88 72 36C72 16.12 55.88 0 36 0Z"></path><g opacity="1"  transform="translate(10.075851440429688 10.07586669921875)  rotate(0)"><g opacity="1"  transform="translate(5.339996337890625 2.51934814453125)  rotate(0)"></g><g opacity="1"  transform="translate(4.3899993896484375 12.22998046875)  rotate(0)"><path id="文本 5" fill-rule="evenodd" style="fill:#FFFFFF" opacity="1" d="M14.99,0l10.12,24.94h-6.13l-1.91,-5.04h-9.44l-1.84,5.04h-5.79l9.85,-24.94zM12.27,7.26l-2.83,7.77h5.79z"></path><path id="文本 5" fill-rule="evenodd" style="fill:#FFFFFF" opacity="1" d="M35.097,6.84924c3.82,0 5.9,2.13 5.9,2.13c2.07,2.12996 2.07,6.00996 2.07,6.00996v9.95h-4.66c-0.17,-1.43 -0.24,-1.9 -0.24,-1.9c-0.82,1.19 -1.98,1.77 -1.98,1.77c-1.16,0.58 -2.93,0.58 -2.93,0.58c-1.87,0 -3.42,-0.67 -3.42,-0.67c-1.55,-0.66 -2.46,-1.91 -2.46,-1.91c-0.9,-1.24 -0.9,-2.94 -0.9,-2.94c0,-1.77 1.01,-3.12 1.01,-3.12c1,-1.35 2.7,-2.06 2.7,-2.06c1.71,-0.72 3.72,-0.72 3.72,-0.72c1.87,0 3.68,0.65 3.68,0.65c-0.24,-3.34 -3.03,-3.34 -3.03,-3.34c-2.36,0 -3.41,2.18 -3.41,2.18l-3.92,-2.28c0.99,-2.00996 3.05,-3.16996 3.05,-3.16996c2.06,-1.16 4.82,-1.16 4.82,-1.16zM35.067,17.7192c-1.4,0 -2.22,0.51 -2.22,0.51c-0.82,0.51 -0.82,1.36 -0.82,1.36c0,0.79 0.62,1.23 0.62,1.23c0.61,0.44 1.57,0.44 1.57,0.44c1.29,0 2.33,-0.75 2.33,-0.75c1.04,-0.75 1.04,-2.01 1.04,-2.01v-0.44c-1.33,-0.34 -2.52,-0.34 -2.52,-0.34z"></path></g></g></g><g opacity="1"  transform="translate(85.5 7.5)  rotate(0)"><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M5.25 0C2.35 0 0 2.35 0 5.25C0 8.15 2.35 10.5 5.25 10.5C8.15 10.5 10.5 8.15 10.5 5.25C10.5 2.35 8.15 0 5.25 0Z"></path><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M21.38 12.75C19.93 12.75 18.75 13.93 18.75 15.38C18.75 16.82 19.93 18 21.38 18C22.82 18 24 16.82 24 15.38C24 13.93 22.82 12.75 21.38 12.75Z"></path></g><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M21 63C18.93 63 17.25 64.68 17.25 66.75C17.25 68.82 18.93 70.5 21 70.5C23.07 70.5 24.75 68.82 24.75 66.75C24.75 64.68 23.07 63 21 63Z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="120" height="90" /></defs></svg><p id="defaultText" class="text-style">输入品牌名称或网址链接</p>
         </div>
     </div>
 </body>
 
 <script>
-    const input = document.querySelector("input")
-    const inputBox = document.querySelector("#inputBox")
-    let clear = document.getElementById("clearButton");
 
-    input.oninput = () => {
-        displayClearButton();
-        const userInput = input.value;
-        
-        if (userInput === "") {
-            // ends the event
-            return;
+    // zeroStates of the plugin
+    const zeroStates = {
+        default: {
+            boxId: 'zeroStateDefaultBox',
+            content: '<svg id="defaultImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="90" viewBox="0 0 120 90" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><g opacity="1"  transform="translate(24 9)  rotate(0)"><path id="圆形 4" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M36 0C16.12 0 0 16.12 0 36C0 55.88 16.12 72 36 72C55.88 72 72 55.88 72 36C72 16.12 55.88 0 36 0Z"></path><g opacity="1"  transform="translate(10.075851440429688 10.07586669921875)  rotate(0)"><g opacity="1"  transform="translate(5.339996337890625 2.51934814453125)  rotate(0)"></g><g opacity="1"  transform="translate(4.3899993896484375 12.22998046875)  rotate(0)"><path id="文本 5" fill-rule="evenodd" style="fill:#FFFFFF" opacity="1" d="M14.99,0l10.12,24.94h-6.13l-1.91,-5.04h-9.44l-1.84,5.04h-5.79l9.85,-24.94zM12.27,7.26l-2.83,7.77h5.79z"></path><path id="文本 5" fill-rule="evenodd" style="fill:#FFFFFF" opacity="1" d="M35.097,6.84924c3.82,0 5.9,2.13 5.9,2.13c2.07,2.12996 2.07,6.00996 2.07,6.00996v9.95h-4.66c-0.17,-1.43 -0.24,-1.9 -0.24,-1.9c-0.82,1.19 -1.98,1.77 -1.98,1.77c-1.16,0.58 -2.93,0.58 -2.93,0.58c-1.87,0 -3.42,-0.67 -3.42,-0.67c-1.55,-0.66 -2.46,-1.91 -2.46,-1.91c-0.9,-1.24 -0.9,-2.94 -0.9,-2.94c0,-1.77 1.01,-3.12 1.01,-3.12c1,-1.35 2.7,-2.06 2.7,-2.06c1.71,-0.72 3.72,-0.72 3.72,-0.72c1.87,0 3.68,0.65 3.68,0.65c-0.24,-3.34 -3.03,-3.34 -3.03,-3.34c-2.36,0 -3.41,2.18 -3.41,2.18l-3.92,-2.28c0.99,-2.00996 3.05,-3.16996 3.05,-3.16996c2.06,-1.16 4.82,-1.16 4.82,-1.16zM35.067,17.7192c-1.4,0 -2.22,0.51 -2.22,0.51c-0.82,0.51 -0.82,1.36 -0.82,1.36c0,0.79 0.62,1.23 0.62,1.23c0.61,0.44 1.57,0.44 1.57,0.44c1.29,0 2.33,-0.75 2.33,-0.75c1.04,-0.75 1.04,-2.01 1.04,-2.01v-0.44c-1.33,-0.34 -2.52,-0.34 -2.52,-0.34z"></path></g></g></g><g opacity="1"  transform="translate(85.5 7.5)  rotate(0)"><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M5.25 0C2.35 0 0 2.35 0 5.25C0 8.15 2.35 10.5 5.25 10.5C8.15 10.5 10.5 8.15 10.5 5.25C10.5 2.35 8.15 0 5.25 0Z"></path><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M21.38 12.75C19.93 12.75 18.75 13.93 18.75 15.38C18.75 16.82 19.93 18 21.38 18C22.82 18 24 16.82 24 15.38C24 13.93 22.82 12.75 21.38 12.75Z"></path></g><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M21 63C18.93 63 17.25 64.68 17.25 66.75C17.25 68.82 18.93 70.5 21 70.5C23.07 70.5 24.75 68.82 24.75 66.75C24.75 64.68 23.07 63 21 63Z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="120" height="90" /></defs></svg><p id="defaultText" class="text-style">输入品牌名称或网址链接</p>'
+        },
+        null: {
+            boxId: 'zeroStateNullBox',
+            content: '<svg id="nullImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="90" viewBox="0 0 120 90" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><g opacity="1"  transform="translate(24 9)  rotate(0)"><path id="圆形 4" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M36 0C16.12 0 0 16.12 0 36C0 55.88 16.12 72 36 72C55.88 72 72 55.88 72 36C72 16.12 55.88 0 36 0Z"></path><g opacity="1"  transform="translate(12 18)  rotate(0)"><path id="矩形 5" fill-rule="evenodd" style="fill:#FFFFFF" opacity="0.6" d="M4.44959 29.69L40.8996 29.69C42.5796 29.69 43.9496 28.33 43.9496 26.65L43.9496 6.12C43.9496 4.43 42.5896 3.07 40.8996 3.07L27.0096 3.07C25.8296 3.07 24.6696 2.8 23.6096 2.27L20.4496 0.69C19.5296 0.23 18.5196 0 17.4996 0L4.44959 0C2.76959 0 1.40959 1.36 1.40959 3.04L1.40959 26.65C1.40959 28.33 2.76959 29.69 4.44959 29.69Z"></path><path id="矩形 5" fill-rule="evenodd" style="fill:#FFFFFF" opacity="1" d="M4.3 36.3531L42.01 36.3531C43.55 36.3531 44.85 35.1931 45.03 33.6631L47.6 11.8431C47.81 10.0331 46.4 8.44305 44.58 8.44305L3.2 8.44305C1.46 8.44305 0.07 9.90305 0.16 11.6431L1.26 33.4631C1.34 35.0831 2.68 36.3531 4.3 36.3531Z"></path></g></g><g opacity="1"  transform="translate(85.5 7.5)  rotate(0)"><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M5.25 0C2.35 0 0 2.35 0 5.25C0 8.15 2.35 10.5 5.25 10.5C8.15 10.5 10.5 8.15 10.5 5.25C10.5 2.35 8.15 0 5.25 0Z"></path><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M21.38 12.75C19.93 12.75 18.75 13.93 18.75 15.38C18.75 16.82 19.93 18 21.38 18C22.82 18 24 16.82 24 15.38C24 13.93 22.82 12.75 21.38 12.75Z"></path></g><path id="圆形 2" fill-rule="evenodd" style="fill:#E6E6E6" opacity="1" d="M21 63C18.93 63 17.25 64.68 17.25 66.75C17.25 68.82 18.93 70.5 21 70.5C23.07 70.5 24.75 68.82 24.75 66.75C24.75 64.68 23.07 63 21 63Z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="120" height="90" /></defs></svg><p id="nullText1" class="text-style">暂无结果</p><p id="nullText2" class="text-style" style="vertical-align: center">输入网址链接试试</p>'
+        },
+        unstable: {
+            boxId: 'zeroStateUnstableBox',
+            content: '<svg id="unstableImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="90" viewBox="0 0 120 90" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><g opacity="1"  transform="translate(85.5 7.5)  rotate(0)"><path id="圆形 2" fill-rule="evenodd" style="fill:#808080" opacity="0.2" d="M5.25 0C2.35 0 0 2.35 0 5.25C0 8.15 2.35 10.5 5.25 10.5C8.15 10.5 10.5 8.15 10.5 5.25C10.5 2.35 8.15 0 5.25 0Z"></path><path id="圆形 2" fill-rule="evenodd" style="fill:#808080" opacity="0.2" d="M21.38 12.75C19.93 12.75 18.75 13.93 18.75 15.38C18.75 16.82 19.93 18 21.38 18C22.82 18 24 16.82 24 15.38C24 13.93 22.82 12.75 21.38 12.75Z"></path></g><path id="圆形 4" fill-rule="evenodd" style="fill:#808080" opacity="0.2" d="M60 9C40.12 9 24 25.12 24 45C24 64.88 40.12 81 60 81C79.88 81 96 64.88 96 45C96 25.12 79.88 9 60 9Z"></path><g opacity="1"  transform="translate(35.27984619140625 28.08453369140625)  rotate(0)"><path id="路径 2" fill-rule="evenodd" style="fill:#FFFFFF" opacity="0.6" d="M49.44 10.06C43.11 3.82 34.45 0 24.86 0C15.18 0 6.33 4 0 10.33L4.93 15.27C9.96 10.15 17.04 6.98 24.86 6.98C32.49 6.98 39.48 10.06 44.51 14.99L49.44 10.06Z"></path><path id="路径 3" fill-rule="evenodd" style="fill:#FFFFFF" opacity="0.6" d="M39.4763 19.83C35.7563 16.11 30.5363 13.78 24.7663 13.78C18.8963 13.78 13.5963 16.2 9.77631 20.11L14.7063 25.05C17.3163 22.44 20.8563 20.76 24.8563 20.76C28.7663 20.76 32.2163 22.25 34.7263 24.77L39.4763 19.83Z"></path><path id="路径 4" fill-rule="evenodd" style="fill:#FFFFFF" opacity="0.9" d="M24.8558 27.6531C22.8158 27.6531 20.9458 28.5831 19.6458 29.9831L23.8358 34.1731C24.2458 34.5831 24.9158 34.5831 25.3258 34.1731L29.7958 29.7031C28.4958 28.4931 26.8158 27.6531 24.8558 27.6531Z"></path></g><g opacity="1"  transform="translate(67.070068359375 45.34991455078125)  rotate(0)"><path id="路径 1" fill-rule="evenodd" style="fill:#FFFFFF" opacity="1" d="M17.65 8.83C17.65 3.95 13.7 0 8.83 0C3.95 0 0 3.95 0 8.83C0 13.7 3.95 17.65 8.83 17.65C13.7 17.65 17.65 13.7 17.65 8.83Z"></path><path  id="路径 1" style="fill:#E6E6E6; opacity:1;" d="M15.8441,15.8441c-0.91507,0.915 -1.966,1.62357 -3.1528,2.1257c-1.22947,0.52013 -2.51657,0.7802 -3.8613,0.7802c-1.34694,0 -2.63579,-0.26 -3.86655,-0.78c-1.18821,-0.50207 -2.24019,-1.2106 -3.15596,-2.1256c-0.91566,-0.91493 -1.62468,-1.96593 -2.12706,-3.153c-0.52028,-1.22933 -0.78043,-2.51647 -0.78043,-3.8614c0,-1.34713 0.26007,-2.63602 0.78022,-3.86668c0.50229,-1.1884 1.21127,-2.24045 2.12696,-3.15614c0.91569,-0.91569 1.96774,-1.62467 3.15614,-2.12696c1.23066,-0.52015 2.51955,-0.78022 3.86668,-0.78022c1.34493,0 2.63207,0.26014 3.8614,0.78042c1.18707,0.50238 2.23807,1.21141 3.153,2.12707c0.915,0.91577 1.62353,1.96775 2.1256,3.15596c0.52,1.23076 0.78,2.51961 0.78,3.86655c0,1.34473 -0.26007,2.63183 -0.7802,3.8613c-0.50213,1.1868 -1.2107,2.23773 -2.1257,3.1528zM14.2881,3.36251c-0.7126,-0.71321 -1.53067,-1.26523 -2.4542,-1.65606c-0.95527,-0.4043 -1.95657,-0.60645 -3.0039,-0.60645c-1.04991,0 -2.05331,0.20222 -3.0102,0.60665c-0.92472,0.39084 -1.74371,0.9429 -2.45698,1.65617c-0.71327,0.71327 -1.26533,1.53226 -1.65617,2.45698c-0.40443,0.95689 -0.60665,1.96029 -0.60665,3.0102c0,1.04733 0.20215,2.04863 0.60645,3.0039c0.39084,0.92353 0.94286,1.7416 1.65606,2.4542c0.71341,0.71287 1.53247,1.26463 2.45717,1.6553c0.95706,0.4044 1.9605,0.6066 3.01032,0.6066c1.04727,0 2.04863,-0.2021 3.0041,-0.6063c0.9234,-0.39073 1.7415,-0.9425 2.4543,-1.6553c0.7128,-0.7128 1.26457,-1.5309 1.6553,-2.4543c0.4042,-0.95547 0.6063,-1.95683 0.6063,-3.0041c0,-1.04982 -0.2022,-2.05326 -0.6066,-3.01032c-0.39067,-0.9247 -0.94243,-1.74376 -1.6553,-2.45717z"></path><g opacity="1"  transform="translate(7.5936279296875 4.0291748046875)  rotate(0)"><g opacity="1"  transform="translate(0 0)  rotate(0)"><path id="路径 2" fill-rule="evenodd" style="fill:#D5D5D7" opacity="1" d="M1.19002 0C0.60002 0 0.0200195 0.47 0.0200195 1.06L0.33002 5.46C0.33002 6.04 0.59002 6.52 1.18002 6.52C1.76002 6.52 2.06002 6.04 2.06002 5.46L2.37002 1.06C2.37002 0.47 1.77002 0 1.19002 0Z"></path><path id="路径 3" fill-rule="evenodd" style="fill:#D5D5D7" opacity="1" d="M0 8.78821C0 9.44821 0.53 9.98821 1.19 9.98821C1.85 9.98821 2.39 9.44821 2.39 8.78821C2.39 8.13821 1.85 7.59821 1.19 7.59821C0.53 7.59821 0 8.13821 0 8.78821Z"></path></g></g></g><path id="圆形 2" fill-rule="evenodd" style="fill:#808080" opacity="0.2" d="M21 63C18.93 63 17.25 64.68 17.25 66.75C17.25 68.82 18.93 70.5 21 70.5C23.07 70.5 24.75 68.82 24.75 66.75C24.75 64.68 23.07 63 21 63Z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="120" height="90" /></defs></svg><p id="unstableText" class="text-style">网络连接不稳定，请重试</p><p id="unstableButton" class="text-style">刷新</p>'
         }
-
-
-
-        
     }
 
-    const sentRequest = (msg) => parent.postMessage({ pluginMessage: {}}, "*")
+    const SVG = {
+        clear: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" fill="none"><g opacity="0.8"  transform="translate(0 0)  rotate(0)"><path id="减去顶层" fill-rule="evenodd" style="fill:#202020" opacity="0.6" d="M8,2c3.31,0 6,2.69 6,6c0,3.31 -2.69,6 -6,6c-3.31,0 -6,-2.69 -6,-6c0,-3.31 2.69,-6 6,-6zM7.99998,8.70708l1.76778,1.76782c0.198,0.198 0.50914,0.198 0.70714,0c0.198,-0.198 0.198,-0.50915 0,-0.70714l-1.76782,-1.76779l1.76782,-1.76779c0.198,-0.19799 0.198,-0.50911 0,-0.7071c-0.198,-0.19799 -0.50915,-0.19799 -0.70714,0l-1.76778,1.76778l-1.76775,-1.76774c-0.19799,-0.19799 -0.50912,-0.19799 -0.70711,0c-0.19799,0.19799 -0.19799,0.50912 0,0.7071l1.76775,1.76775l-1.76775,1.76775c-0.19799,0.19799 -0.19799,0.50908 0,0.70708c0.19799,0.198 0.50912,0.198 0.70711,0z"></path></g></svg>',
+
+        returnArrow: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path id="路径 1 (轮廓)" fill-rule="evenodd" style="fill:#202020" opacity="1" d="M8.19 5.54C8.16 5.53 8.13 5.52 8.1 5.51C8.07 5.5 8.03 5.5 8 5.5C7.97 5.5 7.93 5.5 7.9 5.51C7.87 5.52 7.84 5.53 7.81 5.54C7.78 5.55 7.75 5.57 7.72 5.58C7.69 5.6 7.67 5.62 7.65 5.65L4.15 9.15C4.12 9.17 4.1 9.19 4.08 9.22C4.07 9.25 4.05 9.28 4.04 9.31C4.03 9.34 4.02 9.37 4.01 9.4C4 9.43 4 9.47 4 9.5C4 9.53 4 9.57 4.01 9.6C4.02 9.63 4.03 9.66 4.04 9.69C4.05 9.72 4.07 9.75 4.08 9.78C4.1 9.81 4.12 9.83 4.15 9.85C4.17 9.88 4.19 9.9 4.22 9.92C4.25 9.93 4.28 9.95 4.31 9.96C4.34 9.97 4.37 9.98 4.4 9.99C4.43 10 4.47 10 4.5 10C4.53 10 4.57 10 4.6 9.99C4.63 9.98 4.66 9.97 4.69 9.96C4.72 9.95 4.75 9.93 4.78 9.92C4.81 9.9 4.83 9.88 4.85 9.85L8 6.71L11.15 9.85C11.19 9.9 11.25 9.94 11.31 9.96C11.37 9.99 11.43 10 11.5 10C11.57 10 11.63 9.99 11.69 9.96C11.75 9.94 11.81 9.9 11.85 9.85C11.88 9.83 11.9 9.81 11.92 9.78C11.93 9.75 11.95 9.72 11.96 9.69C11.97 9.66 11.98 9.63 11.99 9.6C12 9.57 12 9.53 12 9.5C12 9.47 12 9.43 11.99 9.4C11.98 9.37 11.97 9.34 11.96 9.31C11.95 9.28 11.93 9.25 11.92 9.22C11.9 9.19 11.88 9.17 11.85 9.15L8.35 5.65C8.33 5.62 8.31 5.6 8.28 5.58C8.25 5.57 8.22 5.55 8.19 5.54Z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="16" height="16" /></defs></svg>',
+
+        optionArrow: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" fill="none"><g opacity="0.8"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path id="路径 1 (轮廓)" fill-rule="evenodd" style="fill:#FFFFFF" opacity="1" d="M4.31 6.04C4.28 6.05 4.25 6.07 4.22 6.08C4.19 6.1 4.17 6.12 4.15 6.15C4.12 6.17 4.1 6.19 4.08 6.22C4.07 6.25 4.05 6.28 4.04 6.31C4.03 6.34 4.02 6.37 4.01 6.4C4 6.43 4 6.47 4 6.5C4 6.53 4 6.57 4.01 6.6C4.02 6.63 4.03 6.66 4.04 6.69C4.05 6.72 4.07 6.75 4.08 6.78C4.1 6.81 4.12 6.83 4.15 6.85L7.65 10.35C7.67 10.38 7.69 10.4 7.72 10.42C7.75 10.43 7.78 10.45 7.81 10.46C7.84 10.47 7.87 10.48 7.9 10.49C7.93 10.5 7.97 10.5 8 10.5C8.03 10.5 8.07 10.5 8.1 10.49C8.13 10.48 8.16 10.47 8.19 10.46C8.22 10.45 8.25 10.43 8.28 10.42C8.31 10.4 8.33 10.38 8.35 10.35L11.85 6.85C11.88 6.83 11.9 6.81 11.92 6.78C11.93 6.75 11.95 6.72 11.96 6.69C11.97 6.66 11.98 6.63 11.99 6.6C12 6.57 12 6.53 12 6.5C12 6.47 12 6.43 11.99 6.4C11.98 6.37 11.97 6.34 11.96 6.31C11.95 6.28 11.93 6.25 11.92 6.22C11.9 6.19 11.88 6.17 11.85 6.15C11.81 6.1 11.75 6.06 11.69 6.04C11.63 6.01 11.57 6 11.5 6C11.43 6 11.37 6.01 11.31 6.04C11.25 6.06 11.19 6.1 11.15 6.15L8 9.29L4.85 6.15C4.83 6.12 4.81 6.1 4.78 6.08C4.75 6.07 4.72 6.05 4.69 6.04C4.66 6.03 4.63 6.02 4.6 6.01C4.57 6 4.53 6 4.5 6C4.47 6 4.43 6 4.4 6.01C4.37 6.02 4.34 6.03 4.31 6.04Z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="16" height="16" /></defs></svg>'
+    }
+
+    const GUIBasic = {
+        displayClearButton,
+        removeZeroState,
+        addZeroState,
+    }
+
+    const GUIReset = {
+        resetPlugin,
+        resetResultContainer
+    }
+
+    const Result = {
+        displaySearchResults,
+        createResultBox,
+        resetResultContainer,
+        removeResult,
+    }
+
+    const Detail = {
+        displayBrandDetails,
+        // create secondary page
+        createDetailHeader,
+        createDetailLogo,
+        createDetailColor,
+        createDetailFont,
+        createDetailImg,
+        // create tertiary page
+        displayTertiary
+    }
+
+    const GUIHelper = {
+        debounce,
+        updateFontList,
+        fontAvailable,
+        firstToUpper,
+        handleError,
+        addDivider,
+    }
     
+    // constants
+    const REQUEST_FREQUENCY = 300;
+    const input = document.querySelector("input")
+    const inputBox = document.getElementById("inputBox");
+    let clear = document.getElementById("clearButton");
+    let fontList; // available font list
+    let cut = false;
+
+
+    // should catch any internet error 
+    window.addEventListener('error', (event) => {
+        console.log('internet error!!')
+    })
+
+    // input event
+    input.oninput = () => {
+
+        GUIBasic.displayClearButton();
+        
+        let userInput = input.value;
+        
+        if (!navigator.onLine) {
+            console.log('not online')
+            GUIBasic.removeZeroState()
+            GUIBasic.addZeroState('unstable')
+            return
+        }
+
+        // updates userInput again to avoid deletion of last char
+        if (userInput.length) userInput = input.value;
+
+        if (userInput === "") {
+            // ends the event
+            GUIReset.resetPlugin();
+            return;
+        }
+        // still runs to here if input one char and delete it instantly
+        cut = true;
+        sendRequest("search", {val: userInput})
+    }
+
+
+    // press Enter to select the first result found
+    input.onkeydown = (event) => {
+        if (event.ctrlKey && event.key === 'z') {
+            event.preventDefault();
+        }
+        
+        if (event.key !== 'Enter' || cut) return;
+
+        const result = document.getElementById('resultContainer')
+
+        if (result === null || result.children.length === 0) return;
+
+        const first = result.querySelector('#resultBox')
+        first.click()
+    }
+
+    // to make sure oninput is also executed when last character is deleted
+
+    onmessage = (event) => {
+        const msg = event.data.pluginMessage.pluginMessage
+
+        // event processed within handleError
+        // case where no result or search failed
+        if (handleError(msg.type)) return;
+
+        // case where a successful fetch of brands
+        if (msg.type === 'brands') {
+            // display the result 
+            const brands = msg.val;
+            Result.displaySearchResults(brands);
+            cut = false;
+            return
+        }
+
+        // case where user has selected one brand
+        if (msg.type === 'details') {
+            const details = msg.val;
+            Detail.displayBrandDetails(details);
+            return
+        }
+
+        if (msg.type === 'list') {
+            fontList = msg.val;
+            return
+        }
+    }
+
+    // send information to main ts
+    const post = (type, msg) => parent.postMessage({pluginMessage: {type, ...msg}}, "*");
+
+    // update font list after post initialized
+    GUIHelper.updateFontList()
+    
+    // debounced sendRequest
+    const sendRequest = debounce(post, REQUEST_FREQUENCY)
+
+    // show/delete clear button 
     function displayClearButton() {
         clear = document.getElementById("clearButton");
         const userInput = input.value;
@@ -46,8 +195,9 @@
         if (clear !== null) {
             return;
         }
-        const newClear = document.createElement("input");
+        const newClear = document.createElement("div");
         newClear.id = "clearButton";
+        newClear.innerHTML = SVG.clear
         inputBox.appendChild(newClear);
         newClear.onclick = resetPlugin;
         return;
@@ -56,11 +206,1037 @@
     function resetPlugin() {
         input.value = "";
         displayClearButton();
+
+        const resultContainer = document.getElementById('resultContainer')
+        const box = document.getElementById('box')
+        if (resultContainer !== null) box.removeChild(resultContainer)
+
+        removeZeroState();
+        addZeroState('default');
+    }
+
+    // 防抖 debouncing function
+    function debounce(callback, delay) {
+        let timeoutId;
+        // use closure that saves the timeoutId
+        return function(...args) {
+            clearTimeout(timeoutId)
+            timeoutId = setTimeout(() => callback(...args), delay)
+        }
+    }
+
+    // create drag event
+    function addDragEvent(img) {
+        img.draggable = true;
+        img.ondragend = (event) => dropEnd(event) 
+    }
+
+    function dropEnd(event) {
+        const {clientX, clientY, view} = event;
+        if (view.length === 0) return;
+
+        const filter = /([a-zA-z])+$/i
+        const imgType = filter.exec(event.currentTarget.src)[0]
+        
+        // send dropMessage to the main thread
+        const dropMessage = {
+            clientX: clientX,
+            clientY: clientY,
+            items: [{type: imgType, data: event.currentTarget.src}],
+            dropMetadata: {
+                width: parseInt(event.currentTarget.dataset.width),
+                height: parseInt(event.currentTarget.dataset.height),
+                name: event.currentTarget.dataset.name
+            }
+        }
+
+        parent.postMessage({pluginDrop: dropMessage}, '*')
+    }
+
+    // get available font list
+    function updateFontList() {
+        post('listfont')
+    }
+    // check if font available
+    function fontAvailable(fontName) {
+        /*
+        * fontName properties:
+        * family: string
+        * style: string
+        */
+        if (!fontList) throw new Error('fontList not initialized')
+        if (!('family' in fontName) || !('style' in fontName)) throw new Error('fontName format invalid')
+        const jsDesignFontName = {
+            family: `${fontName.family}_family`,
+            style: `${fontName.family}-${fontName.style}`
+        }   
+        
+       // check font exists in fontList
+       for (const font of fontList) {
+            // check JsDesign font
+            if (font.fontName.family === jsDesignFontName.family && font.fontName.style === jsDesignFontName.style) {
+                return true;
+            }
+
+            // check font from other source
+            if (font.fontName.family === fontName.family && font.fontName.style === fontName.style) {
+                return true;
+            }
+
+        }
+
+       return false;
+
+    }
+    
+    function firstToUpper(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    // remove zero state element (all of them if there exists more than one)
+    function removeZeroState() {
+        const pluginContainer = document.getElementById('box')
+        const zeroStateBox = document.querySelectorAll(".zeroStateBox")
+
+        zeroStateBox.forEach((element) => pluginContainer.removeChild(element))
+    }
+
+    // add zero state element with given `state`
+    function addZeroState(state) {
+        // create new zero state element
+        const pluginContainer = document.getElementById('box')
+        const zeroStateBox = document.createElement('div');
+
+        if (!pluginContainer || !zeroStateBox) throw new Error('failed to add zero state')
+
+        zeroStateBox.className = 'zeroStateBox';
+        zeroStateBox.id = zeroStates[state].boxId;
+        zeroStateBox.classList.add('flex-parent')
+        zeroStateBox.innerHTML = zeroStates[state].content;
+
+        pluginContainer.appendChild(zeroStateBox);
+
+        if (state === 'unstable') {
+            const resetButton = document.querySelector('#unstableButton')
+            resetButton.onclick = () => {
+                console.log("trying reset");
+                if (!navigator.onLine) return;
+                const currInput = document
+                .querySelector('input')
+                .value
+                
+                sendRequest('search', {val: currInput})
+            }
+        }
+    }
+    // function that process the msg of fetch
+    function handleError(msg, val = null) {
+        const userInput = input.value;
+        if (userInput === '' && msg !== 'list') {
+            input.oninput();
+            return 1;
+        }
+        switch(msg) {
+            case 'null':
+                if (!(document.getElementById('zeroStateNullBox') === null)) return 0;
+                removeResult();
+                removeZeroState();
+                addZeroState('null');
+                return 1;
+
+            case 'failed': 
+                if (!(document.getElementById('zeroStateUnstableBox') === null)) return 0;
+                removeResult();
+                removeZeroState();
+                addZeroState('unstable')
+                return 1;
+            
+            default:
+                return 0;
+        }
+    }
+
+
+    // display search results
+    function displaySearchResults(results) {
+        // check if input empty ()
+        if (input.value === '') {return}
+        const MAX_RESULTS_RETURNED = 5;
+
+        // reset the result container
+        GUIBasic.removeZeroState();
+        GUIReset.resetResultContainer();
+        
+        const container = document.getElementById('resultContainer')
+
+        let number = 1;
+        results.forEach((brand) => {
+            const newBox = Result.createResultBox(brand);
+            newBox.onclick = () => {
+                if (!navigator.onLine) {
+                    post('notify', {val: 'Internet not connected'})
+                    return;
+                }
+                post('getDetails', {val: brand.domain})
+            }
+            if (number === MAX_RESULTS_RETURNED) newBox.style.marginBottom = '0px'
+            container.appendChild(newBox)
+            number++
+        })
+
+    }
+
+    function createResultBox(result) {
+        /**
+         * results properties:
+         * 
+         * name: string/null
+         * domain: string
+         * claimed: boolean(true/false)
+         * icon: array(on the api doc), string/null
+         */
+
+        // create result box div
+        const newBox = document.createElement('div')
+        newBox.id = 'resultBox'
+
+        // image with icon
+        const iconBox = document.createElement('div')
+        iconBox.id = 'resultImg'
+        iconBox.classList.add('img-parent')
+        const icon = document.createElement('img')
+        icon.draggable = false;
+        icon.classList.add('img-child')
+        if (result.icon !== null) icon.src = result.icon;
+        iconBox.appendChild(icon)
+
+        // create info box
+        const infoBox = document.createElement('div')
+        infoBox.id = 'resultInfo'
+
+        // set brand title if exists
+        if (result.name !== null) {
+        const title = document.createElement('p')
+
+        title.id = 'resultTitle'
+        title.classList.add('text-style')
+        title.style.width = '162px'
+        title.innerHTML = result.name;
+
+        infoBox.appendChild(title)
+        }
+
+        // set brand domain
+        const domain = document.createElement('p')
+
+        domain.id = 'resultDomain'
+        domain.classList.add('text-style')
+        domain.style.width = '162px'
+        domain.innerHTML = result.domain;
+
+        infoBox.appendChild(domain)
+        
+        // append them to newBox
+        newBox.appendChild(iconBox);
+        newBox.appendChild(infoBox);
+
+        return newBox
+    }
+
+    function resetResultContainer() {
+        const box = document.getElementById('box')
+        removeResult()
+
+        const container = document.createElement('div')
+        container.id = 'resultContainer'
+        container.classList.add('flex-parent')
+        box.appendChild(container)
+    }
+
+    function removeResult() {
+        const box = document.getElementById('box')
+        const container = document.getElementById('resultContainer')
+
+        if (container !== null) box.removeChild(container);
+    }
+
+
+    // display brand details
+    function displayBrandDetails(brand) {
+        resetResultContainer();
+        /**
+        * brand data properties:
+        * name: string/null
+        * domain: string
+        * claimed: true/false
+        * description: string/null
+        * links: string (brand links)
+        * logos: array (brand logos)
+        * colors: array (brand colors)
+        * fonts: array (brand fonts)
+        * fonts: array (brand images)
+        */
+       const box = document.getElementById('box')
+       const container = document.getElementById('resultContainer')
+       const name = (brand.name !== null) ? brand.name: brand.domain
+
+       // create header
+       const header = Detail.createDetailHeader(brand);
+       container.appendChild(header);
+       addDivider();
+
+       // create logo section
+       const logos = Detail.createDetailLogo(brand.logos, name);
+       container.appendChild(logos)
+       addDivider();
+
+       // create color style section
+       const colors = Detail.createDetailColor(brand.colors);
+       container.appendChild(colors);
+       addDivider();
+
+       // create font style section
+       const fonts = Detail.createDetailFont(brand.fonts);
+       container.appendChild(fonts);
+       addDivider();
+       
+       // create relted img section
+       const imgs = Detail.createDetailImg(brand.images, name);
+       container.appendChild(imgs);
+
+       // create placeholder for bottom padding
+       const bottomPad = document.createElement('hr')
+       bottomPad.style.height = '4px';
+       bottomPad.style.background = 'white';
+       container.appendChild(bottomPad)
+
+       box.appendChild(container)
+    }
+
+    function addDivider() {
+        // add an <hr> element
+        const resultContainer = document.getElementById('resultContainer')
+        const divider = document.createElement('hr')
+        resultContainer.appendChild(divider)
+    }
+
+    function createDetailHeader(brand) {
+
+        // create container
+        const container = document.createElement('div')
+        container.id = 'detailHeader'
+        container.classList.add('flex-parent')
+
+        // create header img container
+        const iconContainer = document.createElement('div')
+        iconContainer.id = 'detailHeaderImg'
+        iconContainer.classList.add('img-parent')
+        // append icon if exists
+        if (brand.logos.length !== 0) {
+            const img = document.createElement('img')
+            img.draggable = false;
+            img.classList.add('img-child')
+            img.src = brand.logos[0].formats[0].src
+            brand.logos.forEach((logo) => {
+                if (logo.type === 'logo') {
+                    img.src = logo.formats[0].src
+                }
+            })
+            iconContainer.appendChild(img)
+        }
+
+        // create header info container
+        const infoContainer = document.createElement('div')
+        infoContainer.id = 'detailHeaderInfo'
+        // create header title
+        if (brand.name !== null) {
+            const title = document.createElement('p')
+            title.id = 'detailHeaderTitle'
+            title.innerHTML = brand.name
+            infoContainer.appendChild(title)
+        }
+        // create header domain
+        const domain = document.createElement('p')
+        domain.id = 'detailHeaderDomain'
+        domain.innerHTML = brand.domain
+        domain.onclick = (event) => {
+            // to avoid that it opens within the plugin 
+            event.preventDefault();
+            window.open(brand.domain, '_blank')
+        }
+        infoContainer.appendChild(domain)
+
+        // append icon, info to header container
+        container.appendChild(iconContainer)
+        container.appendChild(infoContainer)
+
+        return container
+        
+    }
+
+    function createDetailsContainer(title) {
+        const details = document.createElement('details')
+        const summary = document.createElement('summary')
+        summary.innerHTML = title;
+        // const para = document.createElement('p')
+        // para.innerHTML = 'test'
+        // details.append(para)
+        details.appendChild(summary)
+        return details
+    }
+
+    function createDetailLogo(logos, name) {
+        // input is an array
+        const container = createDetailsContainer('LOGO')
+        container.open = true;
+        if (logos.length === 0) return container
+        /**
+        * logos properties:
+        * type: logo, icon, symbol, other
+        * theme: dark, light, null
+        * formats: array \--\> this will be used in tertiary page
+        */
+
+        const MAX_LOGO_PER_LINE = 2;
+        let logoType = {
+            icon: [],
+            symbol: [],
+            logo: [],
+        }
+
+        let processedLogos = []
+
+        // add to each type 
+        logos.forEach((logo) => {
+            const type = logo.type;
+            // impossible to distinguish variant if everything else has type 'other'
+            // so they will be processed directly
+            if (type === 'other') {
+                const logoBox = createLogoBox([logo], name)
+                processedLogos.push(logoBox);
+            } else {
+            logoType[type].push(logo)
+            }
+        })
+
+
+        // process 有名有姓的 type
+        for (const type in logoType) {
+            // do not process prototype
+            if (!logoType.hasOwnProperty(type) || logoType[type].length === 0) continue
+            
+            const logoBox = createLogoBox(logoType[type], name)
+            processedLogos.unshift(logoBox)
+        }
+
+
+        const iteration = Math.ceil(processedLogos.length/MAX_LOGO_PER_LINE)
+
+        // create actual containers based on the length of processedLogos
+        for (let i = 0; i < iteration; i++) {
+            const logosContainer = document.createElement('div')
+            logosContainer.id = 'detailLogoContainer'
+
+            // there will be at least one logo to be appended in each iteration
+            for (let j = 0; j < MAX_LOGO_PER_LINE; j++) {
+                if (processedLogos.length === 0) break;
+                const curr = processedLogos.shift()
+                logosContainer.appendChild(curr)
+            }
+
+            container.appendChild(logosContainer)
+        }
+
+        return container
+
+        function createLogoBox(logo, brandname) {
+            // takes an array as input
+            // use onclick to store the needed information (closure?)
+            const oneBox = document.createElement('div')
+            oneBox.id = 'detailLogo'
+            oneBox.classList.add('img-parent')
+
+            const preview = document.createElement('img')
+            preview.draggable = false;
+            preview.classList.add('img-child')
+            // always use the first entry as the preview
+            preview.src = logo[0].formats[0].src 
+            logo.forEach((variant) => {
+                if (variant.theme === 'dark') {
+                    preview.src = variant.formats[0].src;
+                }
+            })
+            oneBox.appendChild(preview)
+
+            const hover = document.createElement('p')
+            hover.id = 'detailLogoHover'
+            hover.classList.add('text-style')
+            hover.innerHTML = logo[0].type
+            oneBox.appendChild(hover)
+
+            oneBox.onclick = () => {
+                // use closure to store the data
+                const variants = logo;
+
+                const layerName = `${brandname}-${variants[0].type}`
+                // display tertiary page
+                displayTertiary(variants, layerName)
+            }
+
+            return oneBox;
+        }
+    }
+
+    function createDetailColor(colors) {
+        const container = createDetailsContainer('颜色样式')
+        if (colors.length === 0) return container
+        /**
+        * colors properties:
+        * hex: string -> rgb
+        * type: accent, dark, light, brand
+        * britghtness: integer -> a (0-255)
+        */
+        const MAX_COLOR_PER_LINE = 5;
+        let processedColor = []
+
+        // turn color into colorBox
+        colors.forEach((color) => {
+            const rgba = hex2rgb(color.hex)
+            rgba.a = color.brightness.toString()
+
+            const colorBox = createColorBox(rgba)
+            processedColor.push(colorBox)
+        })
+
+        // create
+        const iteration = Math.ceil(processedColor.length/MAX_COLOR_PER_LINE)
+
+        for (let i = 0; i < iteration; i++) {
+            const colorContainer = document.createElement('div')
+            colorContainer.id = 'detailColorContainer'
+
+            for (let j = 0; j < MAX_COLOR_PER_LINE; j++) {
+                if (processedColor.length === 0) break;
+                let oneColor = processedColor.shift()
+                if (j === 4) oneColor.style.marginRight = '0px'
+
+                colorContainer.appendChild(oneColor)
+            }
+
+            container.appendChild(colorContainer)
+        }
+        
+        return container
+
+
+        function hex2rgb(hex) {
+            const filter = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i
+            const result = filter.exec(hex);
+
+            return result ? {
+                r: parseInt(result[1], 16).toString(),
+                g: parseInt(result[2], 16).toString(),
+                b: parseInt(result[3], 16).toString(),
+                a: '0'
+            } : null;
+        }
+
+        function createColorBox(color) {
+            const colorBox = document.createElement('div')
+            colorBox.id = 'detailColor'
+            
+            // parse color into rgba expression
+            const rgb = `rgb(${color.r},${color.g},${color.b})`
+            
+            colorBox.style.background = rgb;
+
+            const toPost = {
+                r: parseInt(color.r),
+                g: parseInt(color.g),
+                b: parseInt(color.b)
+            }
+
+            colorBox.onclick = () => {
+                post('color', {val: toPost})
+            }
+            return colorBox
+        }
+    }
+
+    function createDetailFont(fonts) {
+        const container = createDetailsContainer('字体样式')
+        const UNAVAILABLE_COLOR = 'rgb(183, 183, 183)'
+        const filter = /^([a-zA-Z\d\s]+)(?:-(\w+))?$/i
+        if (fonts.length === 0) return container 
+        
+        /**
+        * fonts properties
+        * name: string
+        * type: title, body
+        * origin: google, custom, system, null
+        * originId: string, null
+        */
+
+
+        fonts.forEach(font => {
+            try {
+            const fontBox = createFontBox(font)
+            container.appendChild(fontBox)
+            } catch(error) {console.log(error)}
+        })
+
+        return container
+
+        function createFontBox(oneFont) {
+            // fontName format
+            let fontStyle = filter.exec(oneFont.name)
+            let available = false;
+            if (fontStyle === null) throw 'font name invalid'
+            
+            for (let i = 0; i < fontStyle.length; i++) {
+                if (!fontStyle[i]) continue;
+                fontStyle[i] = firstToUpper(fontStyle[i])
+            }
+            
+
+            const fontName = {
+                family: (fontStyle[1] !== undefined) ? fontStyle[1]: fontStyle[0],
+                style: (fontStyle[2] !== undefined) ? fontStyle[2]: 'Regular'
+            }
+
+            // remove any white space within the font name
+            const formattedFontName = {
+                family: (fontStyle[1] !== undefined) ? fontStyle[1].replace(/\s/g, ''): fontStyle[0].replace(/\s/g, ''),
+                style: (fontStyle[2] !== undefined) ? fontStyle[2].replace(/\s/g, ''): 'Regular'
+            }
+            
+            // availability
+            available = fontAvailable(formattedFontName)
+            if (!available) available = fontAvailable(fontName)
+
+            const fontBox = document.createElement('div')
+            fontBox.id = 'resultBox'
+            fontBox.style.marginBottom = '0px'
+            fontBox.style.marginTop = '8px'
+
+            const preview = document.createElement('div')
+            preview.id = 'resultImg'
+
+            // create preview
+            const previewText = document.createElement('p')
+            previewText.classList.add('text-style')
+            previewText.innerHTML = 'Aa'
+            previewText.style.fontFamily = oneFont.name;
+
+            // create info container
+            const fontInfo = document.createElement('div')
+            fontInfo.id = 'resultInfo'
+
+            // create font type title
+            const fontType = document.createElement('div')
+            fontType.id = 'resultTitle'
+            fontType.innerHTML = oneFont.type
+
+            // create font family description
+            const fontFamily = document.createElement('div')
+            fontFamily.id = 'resultDomain'
+            fontFamily.innerHTML = oneFont.name
+            fontFamily.style.color = 'rgba(32, 32, 32, 0.6)'
+
+            fontBox.onclick = () => {
+                updateFontList()
+
+                if (fontAvailable(fontName)) {
+                    post('font', {val: fontName})
+                    return
+                }
+                
+                if (fontAvailable(formattedFontName)) {
+                    post('font', {val: formattedFontName})
+                    return
+                }
+
+
+                post('notify', {val: 'font unavailable'})
+            }
+
+            if (!available) {
+                fontType.style.color = UNAVAILABLE_COLOR
+                fontFamily.style.color = UNAVAILABLE_COLOR
+
+                previewText.classList.add('strikethrough')
+                previewText.style.color = UNAVAILABLE_COLOR
+                previewText.style.fontFamily = 'Arial'
+            }
+
+            preview.appendChild(previewText)
+            
+            fontInfo.appendChild(fontType)
+            fontInfo.appendChild(fontFamily)
+
+            fontBox.appendChild(preview)
+            fontBox.appendChild(fontInfo)
+        
+            return fontBox
+        }
+        
+    }
+
+    function createDetailImg(imgs, name) {
+        const container = createDetailsContainer('相关图片')
+        if (imgs.length === 0) return container 
+
+        /**
+        * imgs properties:
+        * type: banner, other
+        * formats: array
+        * formats.src: string: png, svg, jpeg
+        * formats.(style: height, width, size, background)
+        */
+
+        const MAX_IMG_PER_LINE = 2;
+        let processedImgs = []
+
+        imgs.forEach((img) => {
+            const imgBox = createImgBox(img, name)
+            processedImgs.push(imgBox)
+        })
+        
+        const iteration = Math.ceil(processedImgs.length/MAX_IMG_PER_LINE)
+
+        // create actual containers based on the length of processedImgs
+        for (let i = 0; i < iteration; i++) {
+            const imgContainer = document.createElement('div')
+            imgContainer.id = 'detailLogoContainer'
+
+            for (let j = 0; j < MAX_IMG_PER_LINE; j++) {
+                if (processedImgs.length === 0) break;
+                const curr = processedImgs.shift()
+                imgContainer.appendChild(curr)
+            }
+
+            container.appendChild(imgContainer)
+        }
+
+        return container
+
+        function createImgBox(img, brandname) {
+            const oneBox = document.createElement('div')
+            oneBox.id = 'detailLogo'
+            oneBox.classList.add('img-parent')
+
+            const layerName = `${brandname}-${img.type}-${img.formats[0].format}`
+            const preview = document.createElement('img')
+            preview.classList.add('img-child')
+            preview.src = img.formats[0].src
+
+            preview.dataset.width = img.formats[0].width
+            preview.dataset.height = img.formats[0].height
+            preview.dataset.name = layerName
+
+            addDragEvent(preview)
+            oneBox.appendChild(preview)
+
+
+            const hover = document.createElement('p')
+            hover.id = 'detailLogoHover'
+            hover.classList.add('text-style')
+            hover.innerHTML = img.type
+            oneBox.appendChild(hover)
+
+            oneBox.onclick = () => {
+                const variant = img.formats
+                console.log(img)
+                
+                /**
+                * variant is an array that contains diff formats
+                * formats properties:
+                * format: format
+                * src: string
+                * width: integer
+                * height: integer
+                */
+                const toPost = {
+                    name: layerName,
+                    format: variant[0].format,
+                    src: variant[0].src,
+                    width: variant[0].width,
+                    height: variant[0].height,
+                }
+
+                post('img', {val: toPost})
+            }
+
+            return oneBox
+        }
+    }
+
+
+    // tertiary page
+    function displayTertiary(variants, name) {
+        // store the previous page and reset the container
+        const result = document.getElementById('resultContainer')
+        const box = document.getElementById('box')
+        resetResultContainer()
+
+        const container = document.getElementById('resultContainer')
+
+        /**
+        * create return bar
+        * 
+        *  
+        */
+        const returnBar = document.createElement('div')
+        returnBar.id = 'returnBar'
+        returnBar.className = 'flex-parent'
+
+        // create return arrow
+        const returnIcon = document.createElement('div')
+        returnIcon.id = 'returnIcon'
+        returnIcon.innerHTML = SVG.returnArrow
+
+        // create return button
+        const returnButton = document.createElement('p')
+        returnButton.innerHTML = '返回'
+        returnButton.id = 'returnButton'
+        returnButton.className = 'text-style'
+
+        returnBar.appendChild(returnIcon)
+        returnBar.appendChild(returnButton)
+
+        returnBar.onclick = () => {
+            removeResult()
+            box.appendChild(result)
+        }
+
+        container.appendChild(returnBar)
+
+        addDivider()
+
+        // create onclick
+        let order = 0;
+        variants.forEach((variant) => {
+            const variantBox = createVariantBox(variant, order, name)
+            container.appendChild(variantBox)
+            order++
+        })
+
+        const bottomPad = document.createElement('hr')
+        bottomPad.style.height = '4px';
+        bottomPad.style.background = 'white';
+        container.appendChild(bottomPad)
+
+        box.appendChild(container)
+        /**
+        * create boxes
+        * 
+        * 
+        */
+
+
+        function createVariantBox(logo, order, brandname) {
+        /**
+        * logo properties:
+        * formats: array
+        *   formats.src: string
+        *   formats.format: svg,png,jpeg?
+        *   size: number
+        * theme: light, dark, null
+        * type: string
+        */
+            const variantContainer = document.createElement('div')
+            variantContainer.id = 'tertiaryBox'
+            variantContainer.className = 'img-parent'
+
+            const tertiaryOption = document.createElement('div')
+            tertiaryOption.id = 'tertiaryOption'
+            tertiaryOption.className = 'flex-parent'
+
+            const option = document.createElement('p')
+            option.className = 'text-style'
+            option.innerHTML = logo.formats[0].format.toUpperCase()
+            tertiaryOption.appendChild(option)
+
+            const nameWithTheme = brandname + (logo.theme === null ? '' : `-${logo.theme}`)
+
+            if (logo.formats.length > 1) {
+                const arrow = document.createElement('div')
+                arrow.innerHTML = SVG.optionArrow
+                tertiaryOption.appendChild(arrow)
+                
+                tertiaryOption.style.paddingRight = '4px'
+                
+                tertiaryOption.onclick = () => {
+                    // create selection pannel
+                    const availableFormat = logo.formats
+                    const formatSelect = createFormatSelect(availableFormat, order, nameWithTheme)
+
+                    const currVariant = document.querySelectorAll('#tertiaryBox')[order]
+                    const selectExist = currVariant.querySelector('#formatSelect') 
+                    if (selectExist !== null) {
+                        currVariant.removeChild(selectExist)
+                        return;
+                    }
+                    
+                    // make the correct format checked
+                    const currFormat = currVariant
+                    .querySelector('#tertiaryOption')
+                    .querySelector('p')
+                    .innerHTML
+
+                    for (let i = 0; i < formatSelect.children.length; i ++) {
+                        if (formatSelect
+                        .children[i]
+                        .querySelector('p')
+                        .innerHTML === currFormat) {
+                            formatSelect
+                            .children[i]
+                            .querySelector('svg')
+                            .style
+                            .visibility = 'visible'
+                        }
+                    }
+
+                    // append it to the correct tertiarybox
+                    currVariant.appendChild(formatSelect)
+                }
+            }
+
+            variantContainer.appendChild(tertiaryOption)
+
+            const preview = document.createElement('img')
+            preview.src = logo.formats[0].src
+            preview.className = 'img-child'
+            addDragEvent(preview)
+
+            // width and height are stored within one of the format
+            let width = 100, height = 100;
+            logo.formats.forEach((formats) => {
+                if ('width' in formats && 'height' in formats){
+                    if (!formats.width || !formats.height) return;
+                    width = formats.width;
+                    height = formats.height
+                }
+            })
+
+            preview.onclick = () => {
+                formatsLen = logo.formats.length
+                
+                const currVariant = document
+                .querySelectorAll('#tertiaryBox')[order]
+
+                const selection = currVariant
+                .querySelector('#tertiaryOption')
+                .querySelector('p')
+                .innerHTML.toLowerCase()
+
+                // still need to go through this since width and height are not defined in all formats
+
+                logo.formats.forEach((formats) => {
+                    if (formats.format === selection) {
+                        const toPost = {
+                            name: `${nameWithTheme}-${selection}`,
+                            src: formats.src,
+                            format: formats.format,
+                            width: width,
+                            height: height
+                        }
+                        
+                        post('img', {val: toPost})
+                    }
+                })
+            }
+            
+            preview.dataset.width = width;
+            preview.dataset.height = height;
+            preview.dataset.name = `${nameWithTheme}-${logo.formats[0].format}`
+
+            variantContainer.appendChild(preview)
+
+            // create hover effect
+            preview.onmouseover = () => {
+                variantContainer.style.background = 'rgb(242, 242, 242)'
+            }
+            preview.onmouseout = () => {
+                variantContainer.style.background = 'rgb(247, 247, 247)'
+            }
+
+            return variantContainer
+            
+        }
+
+        function createFormatSelect(formats, order, prefix) {
+            /**
+            * formats: array
+            *   formats.src: string (img url)
+            *   formats.format: string (png, jpeg, svg...)
+            */
+
+            // create proper format select
+            const formatSelect = document.createElement('div')
+            formatSelect.id = 'formatSelect'
+            
+
+            formats.forEach((format) => {
+
+                // create single option
+                const formatOption = document.createElement('div')
+                formatOption.id = 'formatOption'
+                formatOption.className = 'flex-parent'
+                formatOption.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><path id="形状结合" fill-rule="evenodd" style="fill:#4596FF" opacity="1" d="M6.32 9.82L4.34 7.84C4.05 7.55 3.57 7.55 3.28 7.84L3.28 7.84C2.99 8.13 2.99 8.61 3.28 8.9L5.75 11.37C6.14 11.76 6.77 11.76 7.16 11.37L12.95 5.59C13.24 5.3 13.24 4.82 12.95 4.53L12.95 4.53C12.66 4.24 12.18 4.24 11.89 4.53L6.6 9.82C6.52 9.9 6.4 9.9 6.32 9.82Z"></path></g></svg>'
+
+                const checked = formatOption.querySelector('svg')
+                checked.style.visibility = 'hidden'
+
+                // create format name
+                const formatName = document.createElement('p')
+                formatName.innerHTML = format.format.toUpperCase()
+
+                // append them to formatOption
+                formatOption.appendChild(formatName)
+
+                // create onclick
+                formatOption.onclick = () => {
+                    // change the format text and the src within one tertiary option
+                    const toOption = format.format
+                    const toSrc = format.src
+
+                    // get the correct variant
+                    const parentVariant = document.querySelectorAll('#tertiaryBox')[order]
+
+
+                    // modify the preview within the variant
+                    const currPreview = parentVariant.querySelector('img.img-child')
+                    currPreview.dataset.name = `${prefix}-${toOption}`
+                    currPreview.src = toSrc
+                    
+                    // get the optionbox within the variant
+                    const parentOption = parentVariant.querySelector('#tertiaryOption')
+                    
+                    // modifiy the actual format
+                    const currOption = parentOption.querySelector('p')
+                    currOption.className = 'text-style'
+                    currOption.innerHTML = toOption.toUpperCase()
+
+                    const toDestroy = parentVariant.querySelector('#formatSelect')
+                    parentVariant.removeChild(toDestroy)
+                }
+
+                // append it to formatSelect
+                formatSelect.appendChild(formatOption)
+            })
+
+            return formatSelect
+            
+        }
     }
 
 </script>
 
 <style>
+    /***
+    looking to unite repeated style into one class
+    ***/
     * {
         padding: 0;
         margin: 0;
@@ -71,8 +1247,15 @@
         width: fit-content;
         height: fit-content;
         user-select: none; /* may causing some undefined behavior */
+        flex-shrink: 0;
+        font-family: PingFangSC-Regular, sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: rgba(0, 111, 255, 1);
     }
     #box {
+        position: relative;
         left: 0px;
         top: 0px;
         width: 260px;
@@ -80,40 +1263,52 @@
         opacity: 1;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-content: start;
+        flex-shrink: 0;
+        flex-direction: column;
         background: rgba(255, 255, 255, 1);
-        padding: 16px 16px 16px 16px;
+        overflow: scroll;
+        padding: 16px;
     }
+
+    /* inputBox */
     #inputBox {
+        position: absolute;
         width: 228px;
         height: 32px;
         opacity: 1;
         border-radius: 4px;
+        border: 1px solid #FFFFFF;
         background: rgba(0, 0, 0, 0.03);
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 8px 8px 8px 8px;
+        /* padding: 5px 7px 7px 7px; */
         box-sizing: border-box;
+        justify-content: center;
+        transition: 0.2s;
     }
     #inputBox:hover {
         border: 1px solid #E0E0E0;
-        padding: 7px 7px 7px 7px;
     }
+    /* #inputBox:hover:not(:focus) {
+        border: 1px solid #E0E0E0;
+        padding: 5px 7px 7px 7px;
+    } */
     #inputBox:focus-within {
         /*focused when a child element is focused*/
         border:1px solid rgba(69, 150, 255, 1);
-        padding: 7px 7px 7px 7px;
     }
     #searchIcon {
-        left: 8px;
-        top: 8px;
+        position: absolute;
+        left: 7px;
+        top: 7px;
         width: 16px;
         height: 16px;
         opacity: 0.4;
         display: flex;
+        border: none;
+        padding: 0px;
     }
     input[type="text"] {
+        position: absolute;
         margin-left: 4px;
         margin-right: 4px;
         height: 20px;
@@ -122,14 +1317,8 @@
         padding: 0px;
         background-color: transparent;
         opacity: 1;
-        font-size: 12px;
-        font-weight: 400;
-        font-family: PingFang;
-        letter-spacing: 0px;
-        line-height: 20px;
+
         color: rgba(32, 32, 32, 1);
-        text-align: left;
-        vertical-align: top;
     }
     input[type="text"]:focus {
         outline: none;
@@ -137,32 +1326,574 @@
     input[type="text"]::-webkit-input-placeholder {
         font-size: 12px;
         font-weight: 400;
-        font-family: PingFang;
         letter-spacing: 0px;
         line-height: 20px;
         color: rgba(32, 32, 32, 0.4);
     }
     #clearButton {
-        left: 204px;
-        top: 8px;
+        position: absolute;
+        left: 203px;
+        top: 7px;
         width: 16px;
         height: 16px;
         opacity: 0.8;
         display: flex;
         background-color: transparent;
-        background-image: url(img/clear2x.png);
         background-size: cover;
         border: none;
         cursor: pointer;
     }
-    #zeroStateDefault {
-
+    #clearButton:focus {
+        outline: none;
     }
-    #zeroStateNull {
 
+    /* zero states */
+    .zeroStateBox {
+        /* only for tag purpose */
     }
-    #zeroStateUnstable {
+    #zeroStateDefaultBox {
+        position: absolute;
+        left: 64px;
+        top: 141.5px;
+        width: 132px;
+        height: 114px;
+        opacity: 1;
+    }
+    #defaultImg {
+        left: 6px;
+        top: 0px;
+        width: 120px;
+        height: 90px;
+        margin-bottom: 4px;
+        opacity: 1;
+        display: flex;
+    }
+    #defaultText {
+        left: 0px;
+        top: 94px;
+        width: 132px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        font-size: 12px;
+        color: rgba(32, 32, 32, 0.4);
+        text-align: center;
+    }
+    #zeroStateNullBox {
+        position: absolute;
+        left: 70px;
+        top: 131.5px;
+        width: 120px;
+        height: 138px;
+        opacity: 1;
+    }
+    #nullImg {
+        left: 0px;
+        top: 0px;
+        width: 120px;
+        height: 90px;
+        margin-bottom: 4px;
+        opacity: 1;
+        display: flex;
+    }
+    #nullText1 {
+        left: 24px;
+        top: 0px;
+        width: 48px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        /** 文本1 */
+        font-size: 12px;
+        color: rgba(32, 32, 32, 0.8);
+        text-align: center;
+    }
+    #nullText2 {
+        left: 0px;
+        top: 24px;
+        width: 96px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        /** 文本2 */
+        font-size: 12px;
+        color: rgba(32, 32, 32, 0.4);
+        text-align: center;
+    }
+    #zeroStateUnstableBox {
+        position: absolute;
+        left: 30px;
+        top: 133.5px;
+        width: 200px;
+        height: 138px;
+        opacity: 1;
+    }
+    #unstableImg {
+        left: 40px;
+        top: 0px;
+        width: 120px;
+        height: 90px;
+        margin-bottom: 4px;
+        opacity: 1;
+        display: flex;
+    }
+    #unstableText {
+        left: 34px;
+        top: 0px;
+        width: 132px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        font-size: 12px;
+        color: rgba(32, 32, 32, 0.8);
+        text-align: center;
+    }
+    #unstableButton {
+        margin-top: 4px;
+        left: 88px;
+        top: 24px;
+        width: 24px;
+        height: 20px;
+        opacity: 1;
+        display: flex;
+
+        font-size: 12px;
+        color: rgba(69, 150, 255, 1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* search result */
+    #resultContainer {
+        position: absolute;
+        left: 16px;
+        top: 60px;
+        width: 228px;
+        height: 317px;
+
+        align-items: flex-start;
+    }
+    #resultBox {
+        margin-bottom: 8px;
+        padding: 12px;
+        width: 228px;
+        height: 58px;
+        opacity: 1;
+        border-radius: 6px;
+        background: rgba(32, 32, 32, 0.03);
+        display: flex;
+        justify-content: flex-start;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    #resultBox:hover {
+        background:rgba(32, 32, 32, 0.05)
+    }
+    #resultImg {
+        padding: 2px;
+        width: 34px;
+        height: 34px;
+        opacity: 1;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #resultImg img {
+        border-radius: 6px;
+    }
+    #resultImg p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        color: rgba(32,32,32,1);
+    }
+    #resultInfo {
+        height: 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin-left: 8px;
+    }
+    #resultTitle {
+        height: 16px;
+        opacity: 1;
+        display: flex;
+
+        flex-shrink: 0;
+        /* text */
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        color: rgba(32, 32, 32, 1);
+    }
+    #resultDomain {
+        height: 16px;
+        opacity: 1;
+        display: flex;
+
+        /** 文本1 */
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(32, 32, 32, 0.4);
+    }
+
+    /* detail header */
+    #detailHeader {
+        width: 228px;
+        height: 44px;
+        flex-direction: row;
+        border: none;
+    }
+    #detailHeaderImg {
+        padding: 4px;
+        width: 44px;
+        height: 44px;
+        opacity: 1;
+        display: flex;
+        flex-shrink: 0;
+        border-radius: 50%;
+        border: 1px solid rgba(32, 32, 32, 0.06);
+        background: rgba(255, 255, 255, 1);
+    }
+    #detailHeaderInfo {
+        height: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin-left: 8px;
+    }
+    #detailHeaderTitle {
+        height: 16px;
+        opacity: 1;
+        display: flex;
         
+        /* text */
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        line-height: 16px;
+        color: rgba(32, 32, 32, 1);
+    }
+    #detailHeaderDomain {
+        height: 16px;
+        opacity: 1;
+        display: flex;
+
+        /* text */
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 16px;
+        color: rgba(0, 111, 255, 1);
+        cursor: pointer;
+    }
+    #detailHeaderDomain:hover {
+        color:rgb(13, 78, 163)
+    }
+    hr {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        display: flex;
+        border: none;
+        position: relative;
+        width: 228px;
+        height: 1px;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.03);
+        flex-shrink: 0;
     }
     
+    /* detail expansion */
+    details {
+        /* only shows the folding element*/
+        width: 228px;
+        opacity: 1;
+        display: flex;
+        cursor: pointer;
+        border: none;
+        outline: none;
+
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 20px;
+        color: rgba(32, 32, 32, 1);
+    }
+    details > summary {
+        list-style: none;
+        display: block;
+    }
+    details > summary::after {
+        position: absolute;
+        transform: rotate(180deg);
+        flex-shrink: 0;
+        height: 16px;
+        width: 16px;
+        left: 212px;
+        content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cu%0AdzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5v%0AcmcvMTk5OS94bGluayIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiB2aWV3Qm94%0APSIwIDAgMTYgMTYiIGZpbGw9Im5vbmUiPgogIDxnIG9wYWNpdHk9IjEiIHRy%0AYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkgIHJvdGF0ZSgwKSI+CiAgICA8bWFz%0AayBpZD0iYmctbWFzay0wIiBmaWxsPSJ3aGl0ZSI+CiAgICAgIDx1c2UgeGxp%0Abms6aHJlZj0iI3BhdGhfMCIvPgogICAgPC9tYXNrPgogICAgPGcgbWFzaz0i%0AdXJsKCNiZy1tYXNrLTApIj4KICAgICAgPHBhdGggaWQ9IiYjeDhERUY7JiN4%0ANUY4NDsgMSAoJiN4OEY2RTsmI3g1RUQzOykiIGZpbGwtcnVsZT0iZXZlbm9k%0AZCIgc3R5bGU9ImZpbGw6IzIwMjAyMCIgb3BhY2l0eT0iMSIgZD0iTTguMTkg%0ANS41NEM4LjE2IDUuNTMgOC4xMyA1LjUyIDguMSA1LjUxQzguMDcgNS41IDgu%0AMDMgNS41IDggNS41QzcuOTcgNS41IDcuOTMgNS41IDcuOSA1LjUxQzcuODcg%0ANS41MiA3Ljg0IDUuNTMgNy44MSA1LjU0QzcuNzggNS41NSA3Ljc1IDUuNTcg%0ANy43MiA1LjU4QzcuNjkgNS42IDcuNjcgNS42MiA3LjY1IDUuNjVMNC4xNSA5%0ALjE1QzQuMTIgOS4xNyA0LjEgOS4xOSA0LjA4IDkuMjJDNC4wNyA5LjI1IDQu%0AMDUgOS4yOCA0LjA0IDkuMzFDNC4wMyA5LjM0IDQuMDIgOS4zNyA0LjAxIDku%0ANEM0IDkuNDMgNCA5LjQ3IDQgOS41QzQgOS41MyA0IDkuNTcgNC4wMSA5LjZD%0ANC4wMiA5LjYzIDQuMDMgOS42NiA0LjA0IDkuNjlDNC4wNSA5LjcyIDQuMDcg%0AOS43NSA0LjA4IDkuNzhDNC4xIDkuODEgNC4xMiA5LjgzIDQuMTUgOS44NUM0%0ALjE3IDkuODggNC4xOSA5LjkgNC4yMiA5LjkyQzQuMjUgOS45MyA0LjI4IDku%0AOTUgNC4zMSA5Ljk2QzQuMzQgOS45NyA0LjM3IDkuOTggNC40IDkuOTlDNC40%0AMyAxMCA0LjQ3IDEwIDQuNSAxMEM0LjUzIDEwIDQuNTcgMTAgNC42IDkuOTlD%0ANC42MyA5Ljk4IDQuNjYgOS45NyA0LjY5IDkuOTZDNC43MiA5Ljk1IDQuNzUg%0AOS45MyA0Ljc4IDkuOTJDNC44MSA5LjkgNC44MyA5Ljg4IDQuODUgOS44NUw4%0AIDYuNzFMMTEuMTUgOS44NUMxMS4xOSA5LjkgMTEuMjUgOS45NCAxMS4zMSA5%0ALjk2QzExLjM3IDkuOTkgMTEuNDMgMTAgMTEuNSAxMEMxMS41NyAxMCAxMS42%0AMyA5Ljk5IDExLjY5IDkuOTZDMTEuNzUgOS45NCAxMS44MSA5LjkgMTEuODUg%0AOS44NUMxMS44OCA5LjgzIDExLjkgOS44MSAxMS45MiA5Ljc4QzExLjkzIDku%0ANzUgMTEuOTUgOS43MiAxMS45NiA5LjY5QzExLjk3IDkuNjYgMTEuOTggOS42%0AMyAxMS45OSA5LjZDMTIgOS41NyAxMiA5LjUzIDEyIDkuNUMxMiA5LjQ3IDEy%0AIDkuNDMgMTEuOTkgOS40QzExLjk4IDkuMzcgMTEuOTcgOS4zNCAxMS45NiA5%0ALjMxQzExLjk1IDkuMjggMTEuOTMgOS4yNSAxMS45MiA5LjIyQzExLjkgOS4x%0AOSAxMS44OCA5LjE3IDExLjg1IDkuMTVMOC4zNSA1LjY1QzguMzMgNS42MiA4%0ALjMxIDUuNiA4LjI4IDUuNThDOC4yNSA1LjU3IDguMjIgNS41NSA4LjE5IDUu%0ANTRaIi8+CiAgICA8L2c+CiAgPC9nPgogIDxkZWZzPgogICAgPHJlY3QgaWQ9%0AInBhdGhfMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+%0ACiAgPC9kZWZzPgo8L3N2Zz4K);
+    }
+    details[open] {
+        display: block;
+        cursor: default;
+    }
+    details[open] summary::after {
+        transform: rotate(0deg);
+    }  
+    details[open] summary {
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* detail logo */
+    #detailLogoContainer {
+        margin-top: 8px;
+        width: 228px;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+    #detailLogo {
+        position: relative;
+        padding: 16px;
+        width: 110px;
+        height: 90px;
+        border-radius: 6px;
+        background: rgba(0, 0, 0, 0.03);
+        cursor: pointer;
+        z-index: 1;
+    }
+    #detailLogo img {
+        /* margin: 16px; */
+        z-index: 1;
+    }
+    #detailLogo:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+    #detailLogo:hover #detailLogoHover {
+        visibility: visible;
+        opacity: 1;
+    }
+    #detailLogoHover {
+        position: absolute;
+        margin-top: auto;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 20px;
+        width: 110px;
+        visibility: hidden;
+        opacity: 0;
+        background: rgba(32, 32, 32, 0.6);
+        z-index: 2;
+
+        /* text */
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    /* detail color */
+    #detailColorContainer {
+        margin-top: 8px;
+        width: 228px;
+        height: 39px;
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+    }
+    #detailColor {
+        flex-shrink: 0;
+        display: flex;
+        margin-right: 8px;
+        border-radius: 6px;
+        width: 39.2px;
+        height: 39px;
+        cursor: pointer;
+        border: 1px solid rgba(32, 32, 32, 0.06);
+        transition: 0.2s
+    }
+    #detailColor:hover {
+        border: 1px solid rgba(0, 111, 255, 1);
+    }
+
+    /* tertiary page */
+    #returnBar {
+        justify-content: left;
+        align-items: center;
+        flex-direction: row;
+        width: 228px;
+        height: 20px;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+    #returnIcon {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        align-items: left;
+        transform: rotate(-90deg);
+    }
+    #retrunIcon img {
+        flex-shrink: 0;
+    }
+    #returnButton {
+        margin-left: 2px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    /* tertiary box */
+    #tertiaryBox {
+        position: relative;
+        width: 228px;
+        height: 90px;
+        margin-bottom: 8px;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: 6px;
+        cursor: pointer;
+        overflow: visible;
+    }
+    /* #tertiaryBox:hover {
+        background: rgba(0, 0, 0, 0.05);
+    } */
+    #tertiaryOption {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        border-radius: 6px 0px 6px 0px;
+        padding: 0px 8px;
+        margin-top: auto;
+        margin-left: auto;
+        bottom: 0;
+        right: 0;
+        height: 20px;
+        visibility: visible;
+        opacity: 1;
+        background: rgba(32, 32, 32, 0.6);
+        z-index: 2;
+        
+        text-align: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    /* #tertiaryOption:hover img{
+        background: rbga(32, 32, 32, 0.8);
+    } */
+    #tertiaryOption img {
+        display: flex;
+        width: 16px;
+        height: 16px;
+    }
+    #formatSelect {
+        position: absolute;
+        overflow: hidden;
+        top: 89px;
+        left: 128px;
+
+        width: 100px;
+        border-radius: 8px;
+        padding: 6px 0px;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.35), 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+        background: rgba(255, 255, 255, 1);
+        flex-direction: column;
+        flex-shrink: 0;
+        justify-content: center;
+        z-index: 3;
+    }
+    #formatOption {
+        padding: 0px 6px;
+        flex-direction: row;
+        cursor: pointer;
+
+        flex-shrink: 0;
+        width: 100px;
+        height: 28px;
+        
+        /* text */
+        font-size: 12px;
+    }
+    #formatOption:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+    #formatOption svg {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        visibility: visible;
+        margin-right: 4px;
+        margin-left: 6px;
+    }
+
+
+
+    /* general class */
+    .relative-position {
+        display: flex;
+    }
+    .no-shrink {
+        flex-shrink: 0;
+    }
+    .clickable {
+        cursor: pointer;
+    }
+    .flex-parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flex-child {
+        display: flex;
+    }
+    .text-style {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 20px;
+        text-align: left;
+        vertical-align: top;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .img-parent {
+        border: none;
+        overflow: hidden;
+        object-fit: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .img-child {
+        max-width: 100%;
+        max-height: 100%;
+        flex-shrink: 0;
+    }
+    .strikethrough {
+        position: relative;
+    }
+    .strikethrough::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        right: 0;
+        border-top: 2px solid;
+        border-color: inherit;
+        transform: rotate(30deg);
+    }
 </style>
